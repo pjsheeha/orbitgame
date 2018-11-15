@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{4D68AE57-021A-5191-2673-D850708E4085}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GravManager.cs">
+    <Files>
+      <File FileName="Assets/PlanetPhysics.cs" Line="30" Column="14" />
+      <File FileName="Assets/Script/GravManager.cs" Line="52" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
