@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GravManager.cs">
     <Files>
-      <File FileName="Assets/Script/GravManager.cs" Line="22" Column="44" />
+      <File FileName="Assets/Script/GravManager.cs" Line="95" Column="22" />
       <File FileName="Assets/Resources/clicktomoveCamforNoPlanetScenes.cs" Line="33" Column="34" />
       <File FileName="Assets/Script/assignPlanetBasedOnCollision.cs" Line="20" Column="95" />
       <File FileName="Assets/Resources/freelookcam1.cs" Line="182" Column="1" />
