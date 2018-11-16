@@ -1,4 +1,5 @@
-﻿using System.Collections;
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,6 +42,7 @@ public class MovementScript : MonoBehaviour {
 
 
                 GameObject currOrb = thisOrbit.transform.GetChild(x).gameObject;
+
                 if (currOrb.tag != "orbit")
                 {
                     string charWhich = currOrb.name;
@@ -54,7 +56,6 @@ public class MovementScript : MonoBehaviour {
                         {
                             pressedObjects.Add(currOrb);
                         }
-
 
                     }
                 }
