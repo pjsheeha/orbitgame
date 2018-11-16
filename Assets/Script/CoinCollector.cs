@@ -5,14 +5,28 @@ using UnityEngine;
 public class CoinCollector : MonoBehaviour {
 
     public int[] coinsPerOrb = { 5 };
+    public GameObject player;
     
-    public List<GameObject> orbs;
+    private List<GameObject> orbs;
     private int orbsObtained = 1;
     private int coinsObtained = 0;
 
 	// Initializes orbs list based on order of hierarchy traversal
 	void Start ()
     {
+        MovementScript mv = player.GetComponent<MovementScript>();
+        List<GameObject> orbitsList = mv.playerOrbits;
+
+        orbs = new List<GameObject>();
+        for (int i = 0; i < orbitsList.Count; i++)
+        {
+            GameObject thisOrbit = orbitsList[i];
+            for (int j = 0; j < thisOrbit.transform.childCount; j++)
+            {
+                orbs.Add(thisOrbit.transform.GetChild(j).gameObject);
+            }
+        }
+
         //disable all orbits except first one at start
         for (int i = orbsObtained; i < orbs.Count; i++)
         {
