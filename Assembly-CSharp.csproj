@@ -61,9 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\attractorWorking.cs" />
     <Compile Include="Assets\MovementScript.cs" />
-    <Compile Include="Assets\PlanetPhysics.cs" />
     <Compile Include="Assets\Resources\AbstractTargetFollower.cs" />
     <Compile Include="Assets\Resources\clicktomoveCamforNoPlanetScenes.cs" />
     <Compile Include="Assets\Resources\CrossPlatformInputInitialize.cs" />
@@ -75,11 +73,14 @@
     <Compile Include="Assets\Resources\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Resources\PlatformSpecificContent.cs" />
     <Compile Include="Assets\Resources\VirtualInput.cs" />
-    <Compile Include="Assets\rotateOrbit.cs" />
     <Compile Include="Assets\Script\assignedGravPlanet.cs" />
+    <Compile Include="Assets\Script\assignPlanetBasedOnCollision.cs" />
+    <Compile Include="Assets\Script\attractorWorking.cs" />
     <Compile Include="Assets\Script\collidePlanet.cs" />
     <Compile Include="Assets\Script\GravManager.cs" />
     <Compile Include="Assets\Script\gravPlanetInfo.cs" />
+    <Compile Include="Assets\Script\PlanetPhysics.cs" />
+    <Compile Include="Assets\Script\rotateOrbit.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/petersheehan/CodeBaseFinal/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

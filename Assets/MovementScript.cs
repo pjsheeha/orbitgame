@@ -13,6 +13,7 @@ public class MovementScript : MonoBehaviour {
     public bool returnIn = false;
     public int myNum = 0;
     public Material matPressed;
+    public bool thrustReverse = false;
     public Material normMat;
     public bool letGo = false;
     public List<GameObject> pressedObjects = new List<GameObject>();
@@ -56,8 +57,15 @@ public class MovementScript : MonoBehaviour {
             if (Input.GetKey(KeyCode.Space))
             {
                 for (int u = 0; u < pressedObjects.Count; u++){
-                    transform.GetComponent<Rigidbody>().AddForce(pressedObjects[u].transform.up * speed);
+                    if (thrustReverse == true)
+                    { 
+                        transform.GetComponent<Rigidbody>().AddForce(-pressedObjects[u].transform.up * speed);
 
+                    }
+                    if (thrustReverse == false)
+                    {
+                        transform.GetComponent<Rigidbody>().AddForce(pressedObjects[u].transform.up * speed);
+                    }
 
                 }
             }

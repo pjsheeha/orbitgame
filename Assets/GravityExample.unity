@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 8952148}
   m_LocalRotation: {x: 1.5e-44, y: 0.9153197, z: 1.5e-44, w: -0.40272808}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 837869442}
   m_Father: {fileID: 861723962}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_TurnSmoothing: 0
   m_TiltMax: 0
   m_TiltMin: -90
-  m_LockCursor: 0
+  m_LockCursor: 1
   m_VerticalAutoReturn: 0
   tiltInt: 260
   convo: 0
@@ -1645,7 +1645,7 @@ GameObject:
   - component: {fileID: 430499582}
   m_Layer: 0
   m_Name: finalplayer (1)
-  m_TagString: hasGrav
+  m_TagString: hasPhysics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1662,7 +1662,7 @@ LookAtConstraint:
   m_RotationOffset: {x: 0, y: 0, z: 0}
   m_Roll: 0
   m_WorldUpObject: {fileID: 0}
-  m_UseUpObject: 0
+  m_UseUpObject: 1
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
@@ -1796,13 +1796,14 @@ MonoBehaviour:
   - {fileID: 161544959}
   - {fileID: 1606170823}
   - {fileID: 946620203}
-  speed: 10
+  speed: 200
   willSlowDown: 0
   zScale: 0
   zOffset: 0
   returnIn: 0
   myNum: 0
   matPressed: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  thrustReverse: 0
   normMat: {fileID: 2100000, guid: b39893af1b9894f608e53cf56ceaea73, type: 3}
   letGo: 0
   pressedObjects: []
@@ -1892,7 +1893,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 430499581}
-  m_LocalRotation: {x: 0.0051924223, y: -0.9521759, z: 0.30507636, w: 0.016206354}
+  m_LocalRotation: {x: 0.06522362, y: -0.96487176, z: 0.2505669, w: 0.044550538}
   m_LocalPosition: {x: 0.05, y: -0.415, z: 0.054}
   m_LocalScale: {x: 27.638985, y: 27.638992, z: 27.638992}
   m_Children:
@@ -7428,12 +7429,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62155d2be06374b4084aa19c2582917a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forward: 0
-  backVal: -300
-  forwardVal: -170
-  incre: 0
+  forward: 1
+  backVal: -500
+  forwardVal: -60
+  incre: -60
   custX: 0
   stuck: 0
+  multipurposeCam: {fileID: 8952148}
   custY: 0
   finishedAnimation: 1
 --- !u!114 &683605031
@@ -7914,7 +7916,7 @@ GameObject:
   - component: {fileID: 861723958}
   m_Layer: 0
   m_Name: CameraCube
-  m_TagString: hasGrav
+  m_TagString: hasPhysics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8564,6 +8566,7 @@ GameObject:
   - component: {fileID: 1082810918}
   - component: {fileID: 1082810919}
   - component: {fileID: 1082810921}
+  - component: {fileID: 1082810920}
   m_Layer: 0
   m_Name: TestAtmosphere
   m_TagString: Untagged
@@ -8596,6 +8599,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.76
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1082810920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082810917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3038d65ae81f74a3aa9799c688c82b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camToSwitch: {fileID: 683605026}
 --- !u!114 &1082810921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8608,9 +8623,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPlanet: {fileID: 1082810917}
-  grav: 9
-  playerGravOn: 1
+  grav: 200000
+  playerGravOn: 0
   backUpGrav: 0
+  multiplier: 1
   cameraCube: {fileID: 430499581}
   hasGravity: []
   grava: {fileID: 0}

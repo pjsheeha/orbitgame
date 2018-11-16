@@ -2,9 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.Cameras;
 
-namespace UnityStandardAssets.Cameras
-{
     public class freelookcam1 : PivotBasedCameraRig
     {
         // This script is designed to be placed on the root object of a camera rig,
@@ -180,4 +179,3 @@ namespace UnityStandardAssets.Cameras
             }
         }
     }
-}

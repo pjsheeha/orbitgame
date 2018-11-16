@@ -11,6 +11,7 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
     public bool stuck = false;
     private float custX1 = 0;
     private float custY1 = 0;
+    public GameObject multipurposeCam;
     public float custY = 0;
 
     public bool finishedAnimation = true;
@@ -19,6 +20,7 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
         incre = backVal;
         custX1 = custX;
         custY1 = custY;
+        AllowFullCam(true);
 	}
 	
 	// Update is called once per frame
@@ -47,7 +49,7 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
         }
 	}
 
-    void moveForward()
+    public void moveForward()
     {
         if (incre < forwardVal){
             incre += 5;
@@ -76,7 +78,7 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
         }
         //transform.possdition = new Vector3(0, 0, incre);
     }
-    void moveBack()
+    public void moveBack()
     {
         if (incre < backVal)
         {
@@ -106,5 +108,22 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
             finishedAnimation = true;
         }
 
+
     }
+
+    public void AllowFullCam(bool hasAccess){
+        if (hasAccess){
+            multipurposeCam.GetComponent<freelookcam1>().m_TiltMin = -90;
+            multipurposeCam.GetComponent<freelookcam1>().m_TiltMax = 90;
+
+        }
+        if (!hasAccess)
+        {
+            multipurposeCam.GetComponent<freelookcam1>().m_TiltMin = -90;
+            multipurposeCam.GetComponent<freelookcam1>().m_TiltMax = 0;
+
+        }
+    }
+
+
 }

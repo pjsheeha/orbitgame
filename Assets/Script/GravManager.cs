@@ -8,6 +8,7 @@ using UnityEngine;
         public float grav = 9;
     public bool playerGravOn = false;
         public float backUpGrav;
+    public float multiplier = 1;
     public GameObject cameraCube;
     public List<GameObject> hasGravity = new List<GameObject>();
 
@@ -17,7 +18,7 @@ using UnityEngine;
         void Start()
         {
             backUpGrav = grav;
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("hasGrav")){
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("hasPhysics")){
             hasGravity.Add(obj.gameObject);
         }
 
@@ -51,17 +52,26 @@ using UnityEngine;
                
                     //grav = 1;
                 Vector3 downVec = playerPlanet.transform.position - hasGravity[i].transform.position;
+
+                float forceMagnitude = multiplier * grav / downVec.sqrMagnitude;
+                Vector3 forceVector = downVec.normalized;
+
+
                 Vector3 bodyUp = hasGravity[i].transform.up;
 
 
-                Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, downVec / grav) * hasGravity[i].transform.rotation;
+                Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, forceMagnitude * forceVector) * hasGravity[i].transform.rotation;
                 hasGravity[i].transform.rotation = Quaternion.Slerp(hasGravity[i].transform.rotation, targetRotation, 2 * Time.deltaTime);
 
 
                 if (hasGravity[i].name != "CameraCube")
                 {
 
-                    hasGravity[i].GetComponent<Rigidbody>().AddForce(downVec / grav);
+                    Vector3 forceDown = downVec * multiplier;
+
+
+
+                    hasGravity[i].GetComponent<Rigidbody>().AddForce(forceVector * forceMagnitude);
                 }
             }
         }
