@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GravityExample.unity
+- path: Assets/Scenes/GravityExample.unity
   isLoaded: 1
   isActive: 1
