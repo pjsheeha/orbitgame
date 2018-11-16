@@ -16,7 +16,7 @@ public class SolarSystemLoop : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        physicsObjects = GameObject.FindGameObjectsWithTag("hasGrav");  //To be updated to hasPhysics
+        physicsObjects = GameObject.FindGameObjectsWithTag("hasPhysics");  //To be updated to hasPhysics
         lastTeleport = new float[physicsObjects.Length];
         
         boundary = this.gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
