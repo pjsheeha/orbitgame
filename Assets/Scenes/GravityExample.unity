@@ -2427,6 +2427,7 @@ MonoBehaviour:
   matPressed: {fileID: 2100000, guid: 83b0d85c522094eaf8d1663a48d99eaf, type: 2}
   thrustReverse: 1
   normMat: {fileID: 2100000, guid: b39893af1b9894f608e53cf56ceaea73, type: 3}
+  spaceOn: 0
   letGo: 0
   pressedObjects: []
   playerOrbitSpeeds:
@@ -14301,7 +14302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPlanet: {fileID: 1082810917}
-  grav: 20000000
+  grav: 10000000
   playerGravOn: 0
   cameraCube: {fileID: 430499581}
   hasGravity: []
@@ -15477,7 +15478,7 @@ MeshCollider:
   m_GameObject: {fileID: 1490259616}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -15548,7 +15549,7 @@ SphereCollider:
   m_GameObject: {fileID: 1490259616}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -20408,13 +20409,21 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596133202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c60a792943502040a7cb42eb1179742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   coinsPerOrb: 05000000
-  orbs: []
+  orbs:
+  - {fileID: 1743858469}
+  - {fileID: 196923264}
+  - {fileID: 192482003}
+  - {fileID: 687977917}
+  - {fileID: 2130771407}
+  - {fileID: 244795240}
+  - {fileID: 1424193806}
+  - {fileID: 342927148}
 --- !u!135 &1596133205
 SphereCollider:
   m_ObjectHideFlags: 0
