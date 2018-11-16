@@ -2230,14 +2230,15 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 430499581}
-  m_LocalRotation: {x: -0.96120757, y: -0.10434952, z: 0.054657407, w: -0.24940701}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.9747063, y: 0.08731544, z: 0.03359939, w: 0.20296484}
+  m_LocalPosition: {x: -37.5, y: -9.7, z: 40.1}
   m_LocalScale: {x: 27.638985, y: 27.638992, z: 27.638992}
   m_Children:
   - {fileID: 407094044}
   - {fileID: 161544961}
   - {fileID: 1606170825}
   - {fileID: 946620205}
+  - {fileID: 1596133203}
   - {fileID: 1912457937}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -12113,6 +12114,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584553399}
   m_Mesh: {fileID: 4300032, guid: 1e44bfaae9fe44776aab24c1a03944dd, type: 3}
+--- !u!1 &591685437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591685440}
+  - component: {fileID: 591685439}
+  - component: {fileID: 591685438}
+  m_Layer: 0
+  m_Name: solarSystemManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &591685438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591685437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938bcae1e59620c4a874a2cb0fb3769e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 1366671718}
+  - {fileID: 1490259616}
+  - {fileID: 1938313758}
+  coinPrefab: {fileID: 1230071465133346, guid: 4c92f2dff396f70418b021c0a5e541ae, type: 2}
+  defaultCoins: 100
+--- !u!114 &591685439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591685437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2ed1ba71b3f4846b79e1b71b7b4092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thresholdInKilometers: 0.5
+  teleportCooldownInSeconds: 1
+--- !u!4 &591685440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591685437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &615936279
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,6 +14974,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4623756474174898, guid: 59e66febdfd27422694ed114eeefc9ae,
     type: 2}
   m_PrefabInternal: {fileID: 1578469218}
+--- !u!1 &1596133202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596133203}
+  - component: {fileID: 1596133205}
+  - component: {fileID: 1596133204}
+  m_Layer: 0
+  m_Name: playerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1596133203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596133202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000024155, y: -0.000000029457, z: -0.0000000065549}
+  m_LocalScale: {x: 0.3075899, y: 0.3075899, z: 0.3075899}
+  m_Children: []
+  m_Father: {fileID: 430499590}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596133204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596133202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c60a792943502040a7cb42eb1179742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPerOrb: 05000000
+  player: {fileID: 430499581}
+--- !u!135 &1596133205
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596133202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1606170823
 GameObject:
   m_ObjectHideFlags: 0
@@ -15773,7 +15889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430499590}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1912457938
 TrailRenderer:

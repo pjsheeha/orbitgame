@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\coinSpawner.cs" />
     <Compile Include="Assets\MovementScript.cs" />
     <Compile Include="Assets\Resources\AbstractTargetFollower.cs" />
     <Compile Include="Assets\Resources\clicktomoveCamforNoPlanetScenes.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Script\assignedGravPlanet.cs" />
     <Compile Include="Assets\Script\assignPlanetBasedOnCollision.cs" />
     <Compile Include="Assets\Script\attractorWorking.cs" />
+    <Compile Include="Assets\Script\CoinCollector.cs" />
     <Compile Include="Assets\Script\collidePlanet.cs" />
     <Compile Include="Assets\Script\GravManager.cs" />
     <Compile Include="Assets\Script\gravPlanetInfo.cs" />
