@@ -47,7 +47,7 @@ public class MovementScript : MonoBehaviour {
                     {
                         playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = .1f * playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed;
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
-                        if (!pressedObjects.Contains(currOrb))
+                        if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
                         {
                             pressedObjects.Add(currOrb);
                         }
