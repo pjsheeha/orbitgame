@@ -14,8 +14,8 @@ public class PlanetSpawner : MonoBehaviour {
 
     public SpawnType spawnType;
     public GameObject spawnPrefab;
-    //public int respawnThreshold = 0.5f; // fraction of initial spawns remaining before respawn
-    //public float cullRadius = 0.5f; // guaranteed distance between spawns 
+    public float respawnThreshold = 0.5f; // fraction of initial spawns remaining before respawn
+    public float cullRadius = 5f; // guaranteed distance in m^2 between spawns 
 
     // Uniform Random - Spawns a specified number by uniformly randomly picking positions
     public int randomSpawns = 100;
@@ -28,22 +28,13 @@ public class PlanetSpawner : MonoBehaviour {
     // Mesh - Spawns on vertices of given mesh. Mesh must have same origin as planet.
     public GameObject meshSpawner;
 
+    private List<GameObject> spawnedObjects;
     private int initialSpawns;
-    private int totalSpawns;
+    public int activeSpawns;
 
     void Start() {
-        SpawnObjects();
-    }
 
-    void Update() {
-        // How to count objects being picked up?
-        /* if (totalSpawns < respawnThreshold * initialSpawns)
-         *      SpawnObjects();
-         * */
-    }
-
-    public void SpawnObjects()
-    {
+        spawnedObjects = new List<GameObject>();
         switch (spawnType)
         {
             case SpawnType.Mesh:
@@ -58,7 +49,20 @@ public class PlanetSpawner : MonoBehaviour {
                 SpawnUniformlyRandom();
                 break;
         }
-        initialSpawns = totalSpawns;
+
+        activeSpawns = spawnedObjects.Count;
+        initialSpawns = activeSpawns;
+    }
+
+    void Update() {
+        if (activeSpawns < respawnThreshold * initialSpawns)
+        {
+            foreach(GameObject obj in spawnedObjects)
+            {
+                obj.SetActive(true);
+            }
+            activeSpawns = initialSpawns;
+        }
     }
 
     public void SpawnMesh()
@@ -79,8 +83,12 @@ public class PlanetSpawner : MonoBehaviour {
         foreach (Vector3 vertex in m.mesh.vertices)
         {
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(vertex.normalized);
-            Quaternion q = Quaternion.FromToRotation(Vector3.up, vertex.normalized);
-            SpawnObject(spawnPosition, q);
+
+            if (!CheckSpawnDistanceThreshold(spawnPosition))
+            {
+                Quaternion q = Quaternion.FromToRotation(Vector3.up, vertex.normalized);
+                SpawnObject(spawnPosition, q);
+            }
         }
     }
 
@@ -112,8 +120,11 @@ public class PlanetSpawner : MonoBehaviour {
                 }
 
                 Vector3 spawnPosition = GetSpawnPositionFromUnitVector(v);
-                Quaternion q = Quaternion.FromToRotation(Vector3.up, v);
-                SpawnObject(spawnPosition, q);
+                if (!CheckSpawnDistanceThreshold(spawnPosition))
+                {
+                    Quaternion q = Quaternion.FromToRotation(Vector3.up, v);
+                    SpawnObject(spawnPosition, q);
+                }
             }
         }
     }
@@ -127,9 +138,27 @@ public class PlanetSpawner : MonoBehaviour {
             Vector3 sample = UniformSphereSampler(u1, u2).normalized;
 
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(sample);
-            Quaternion q = Quaternion.FromToRotation(Vector3.up, sample);
-            SpawnObject(spawnPosition, q);
+            if (!CheckSpawnDistanceThreshold(spawnPosition))
+            {
+                Quaternion q = Quaternion.FromToRotation(Vector3.up, sample);
+                SpawnObject(spawnPosition, q);
+            }
         }
+    }
+
+    private bool CheckSpawnDistanceThreshold(Vector3 p)
+    {
+        if (cullRadius == 0)
+            return false;
+
+        Collider[] inRadius = Physics.OverlapSphere(p, cullRadius);
+        foreach(Collider c in inRadius)
+        {
+            if (c.gameObject.CompareTag("coin") /*|| c.gameObject.CompareTag("planetSpawn")*/)
+                return true;
+        }
+
+        return false;
     }
 
     private Vector3 GetSpawnPositionFromUnitVector(Vector3 v)
@@ -142,9 +171,9 @@ public class PlanetSpawner : MonoBehaviour {
         GameObject obj = GameObject.Instantiate(spawnPrefab);
         obj.transform.position = position;
         obj.transform.rotation = q * obj.transform.rotation;
-        obj.transform.SetParent(this.transform);
+        obj.transform.SetParent(transform);
 
-        totalSpawns++;
+        spawnedObjects.Add(obj);
     }
 
     // From http://mathworld.wolfram.com/SpherePointPicking.html
