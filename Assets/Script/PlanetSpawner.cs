@@ -63,12 +63,20 @@ public class PlanetSpawner : MonoBehaviour {
 
     public void SpawnMesh()
     {
-        Mesh m;
-        if (!meshSpawner || meshSpawner.transform.position != transform.position ||
-            !(m = meshSpawner.GetComponent<Mesh>()))
+        MeshFilter m;
+        if (!meshSpawner)
+        {
+            Debug.Log("No mesh assigned to planet " + transform.name);
             return;
+        }
 
-        foreach (Vector3 vertex in m.vertices)
+        if (!(m = meshSpawner.GetComponent<MeshFilter>()))
+        {
+            Debug.Log("No mesh filter component assigned to mesh object " + meshSpawner.transform.name);
+            return;
+        }
+
+        foreach (Vector3 vertex in m.mesh.vertices)
         {
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(vertex.normalized);
             Quaternion q = Quaternion.FromToRotation(Vector3.up, vertex.normalized);
