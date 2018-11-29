@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,17 +15,16 @@ public class MovementScript : MonoBehaviour {
     public Material matPressed;
     public bool thrustReverse = false;
     public Material normMat;
-    public bool spaceOn = false;
     public bool letGo = false;
     public List<GameObject> pressedObjects = new List<GameObject>();
     public List<float> playerOrbitSpeeds = new List<float>();
     public Transform target;
    // public List<bool> pressed = new List<bool>();
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         zScale = transform.localScale.z;
 
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,7 +40,6 @@ public class MovementScript : MonoBehaviour {
 
 
                 GameObject currOrb = thisOrbit.transform.GetChild(x).gameObject;
-
                 if (currOrb.tag != "orbit")
                 {
                     string charWhich = currOrb.name;
@@ -56,34 +53,22 @@ public class MovementScript : MonoBehaviour {
                         {
                             pressedObjects.Add(currOrb);
                         }
+                        for (int u = 0; u < pressedObjects.Count; u++)
+                        {
+                            if (thrustReverse == true)
+                            {
+                                transform.GetComponent<Rigidbody>().AddForce(-pressedObjects[u].transform.up * speed);
 
+                            }
+                            if (thrustReverse == false)
+                            {
+                                transform.GetComponent<Rigidbody>().AddForce(pressedObjects[u].transform.up * speed);
+                            }
+                        }
                     }
                 }
-            }
-
-            if (spaceOn == true)
-            {
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    for (int u = 0; u < pressedObjects.Count; u++)
-                    {
-                        if (thrustReverse == true)
-                        {
-                            transform.GetComponent<Rigidbody>().AddForce(-pressedObjects[u].transform.up * speed);
-
-                        }
-                        if (thrustReverse == false)
-                        {
-                            transform.GetComponent<Rigidbody>().AddForce(pressedObjects[u].transform.up * speed);
-                        }
-
-                    }
-                }
-                pressedObjects.Clear();
-            }
-
-            if (spaceOn == false)
-            {
+                //  if (Input.GetKey(KeyCode.Space))
+                //   {
                 for (int u = 0; u < pressedObjects.Count; u++)
                 {
                     if (thrustReverse == true)
@@ -96,9 +81,13 @@ public class MovementScript : MonoBehaviour {
                         transform.GetComponent<Rigidbody>().AddForce(pressedObjects[u].transform.up * speed);
                     }
 
+                    //     }
                 }
+                pressedObjects.Clear();
+
             }
         }
+
 
         /*
 
