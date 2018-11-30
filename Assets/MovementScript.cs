@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour {
     public List<GameObject> playerOrbs = new List<GameObject>();
     public List<GameObject> playerOrbits = new List<GameObject>();
-
+    public GameObject camCube;
     [SerializeField] public float speed = 0;
     public bool willSlowDown = false;
     public float zScale = 0;
@@ -44,11 +44,19 @@ public class MovementScript : MonoBehaviour {
                 {
                     string charWhich = currOrb.name;
                     currOrb.GetComponent<MeshRenderer>().material = normMat;
-
+                    //currOrb.GetChild(0).gameObject.setActive(false);
+                    if (!Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
+                    {
+                    currOrb.GetComponent<myRocket>().myrocke.SetActive(false);
+                    camCube.GetComponent<followPosition>().leader = gameObject.transform.position;
+                    }
                     if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
                         playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = .1f * playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed;
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
+                        //currOrb.GetChild(0).gameObject.setActive(true);
+                        currOrb.GetComponent<myRocket>().myrocke.SetActive(true);
+                        camCube.GetComponent<followPosition>().leader = currOrb.GetComponent<myRocket>().myCyli.transform.up;
                         if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
                         {
                             pressedObjects.Add(currOrb);
@@ -58,6 +66,7 @@ public class MovementScript : MonoBehaviour {
                             if (thrustReverse == true)
                             {
                                 transform.GetComponent<Rigidbody>().AddForce(-pressedObjects[u].transform.up * speed);
+
 
                             }
                             if (thrustReverse == false)

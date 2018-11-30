@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: 0a5700dcb303c4b1e94cf099ae61aa8c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: castle
+    100002: castle 1
+    100004: castle 2
+    100006: castle 3
+    100008: castle 4
+    100010: castle 5
+    100012: //RootNode
+    100014: pCone1
+    100016: pCone11
+    100018: pCone12
+    100020: pCone13
+    100022: pCone14
+    100024: pCone15
+    100026: pCone16
+    100028: pCone17
+    100030: pCone18
+    100032: pCone19
+    100034: pCone2
+    100036: pCone20
+    100038: pCone21
+    100040: pCone22
+    100042: pCone23
+    100044: pCone24
+    100046: pCone25
+    100048: pCone26
+    100050: pCone27
+    100052: pCone28
+    100054: pCone29
+    100056: pCone30
+    100058: pCone31
+    100060: pCone32
+    100062: pCone33
+    100064: pCone33 1
+    100066: pCone33 2
+    100068: pCone33 3
+    100070: pCone33 4
+    100072: pCone33 5
+    100074: pCone33 6
+    100076: pCone33 7
+    100078: pCone34
+    100080: pCone34 1
+    100082: pCone34 10
+    100084: pCone34 11
+    100086: pCone34 12
+    100088: pCone34 13
+    100090: pCone34 2
+    100092: pCone34 3
+    100094: pCone34 4
+    100096: pCone34 5
+    100098: pCone34 6
+    100100: pCone34 7
+    100102: pCone34 8
+    100104: pCone34 9
+    100106: pCone35
+    100108: pCone35 1
+    100110: pCone35 2
+    100112: pCone35 3
+    100114: pCone35 4
+    100116: pCone35 5
+    100118: pCone35 6
+    100120: pCone35 7
+    100122: pCone36
+    100124: pCone36 1
+    100126: pCone36 10
+    100128: pCone36 11
+    100130: pCone36 12
+    100132: pCone36 13
+    100134: pCone36 14
+    100136: pCone36 2
+    100138: pCone36 3
+    100140: pCone36 4
+    100142: pCone36 5
+    100144: pCone36 6
+    100146: pCone36 7
+    100148: pCone36 8
+    100150: pCone36 9
+    100152: pCone37
+    100154: pCone37 1
+    100156: pCone37 2
+    100158: pCone37 3
+    100160: pCone37 4
+    100162: pCone37 5
+    100164: pCone37 6
+    100166: pCone37 7
+    100168: pCone38
+    100170: pCone38 1
+    100172: pCone38 2
+    100174: pCone38 3
+    100176: pCone38 4
+    100178: pCone39
+    100180: pCone39 1
+    100182: pCone39 2
+    100184: pCone39 3
+    100186: pCone39 4
+    100188: pCone39 5
+    100190: pCone4
+    100192: pCone5
+    100194: pCone6
+    100196: pCone7
+    100198: pCone8
+    100200: pCone9
+    100202: pCylinder1
+    100204: pPlane1
+    100206: pPlatonic1
+    100208: pPlatonic10
+    100210: pPlatonic11
+    100212: pPlatonic12
+    100214: pPlatonic13
+    100216: pPlatonic14
+    100218: pPlatonic15
+    100220: pPlatonic16
+    100222: pPlatonic17
+    100224: pPlatonic2
+    100226: pPlatonic3
+    100228: pPlatonic4
+    100230: pPlatonic5
+    100232: pPlatonic6
+    100234: pPlatonic7
+    100236: pPlatonic8
+    100238: pPlatonic9
+    100240: pSphere1
+    100242: pSphere3
+    100244: pSphere3 1
+    100246: pSphere3 10
+    100248: pSphere3 11
+    100250: pSphere3 12
+    100252: pSphere3 13
+    100254: pSphere3 14
+    100256: pSphere3 15
+    100258: pSphere3 16
+    100260: pSphere3 17
+    100262: pSphere3 18
+    100264: pSphere3 19
+    100266: pSphere3 2
+    100268: pSphere3 20
+    100270: pSphere3 21
+    100272: pSphere3 22
+    100274: pSphere3 23
+    100276: pSphere3 24
+    100278: pSphere3 25
+    100280: pSphere3 26
+    100282: pSphere3 27
+    100284: pSphere3 28
+    100286: pSphere3 29
+    100288: pSphere3 3
+    100290: pSphere3 30
+    100292: pSphere3 31
+    100294: pSphere3 32
+    100296: pSphere3 33
+    100298: pSphere3 34
+    100300: pSphere3 35
+    100302: pSphere3 4
+    100304: pSphere3 5
+    100306: pSphere3 6
+    100308: pSphere3 7
+    100310: pSphere3 8
+    100312: pSphere3 9
+    100314: pSphere4
+    100316: pSphere4 1
+    100318: pSphere4 10
+    100320: pSphere4 11
+    100322: pSphere4 12
+    100324: pSphere4 13
+    100326: pSphere4 14
+    100328: pSphere4 15
+    100330: pSphere4 16
+    100332: pSphere4 17
+    100334: pSphere4 2
+    100336: pSphere4 3
+    100338: pSphere4 4
+    100340: pSphere4 5
+    100342: pSphere4 6
+    100344: pSphere4 7
+    100346: pSphere4 8
+    100348: pSphere4 9
+    100350: weed
+    100352: weed1
+    100354: weed2
+    100356: weed3
+    100358: weed4
+    100360: weed4 1
+    100362: weed4 2
+    100364: weed4 3
+    100366: weed4 4
+    100368: weed5
+    100370: weed5 1
+    100372: weed5 2
+    100374: weed5 3
+    100376: weed6
+    100378: weed6 1
+    100380: weed6 2
+    100382: weed6 3
+    100384: weed6 4
+    400000: castle
+    400002: castle 1
+    400004: castle 2
+    400006: castle 3
+    400008: castle 4
+    400010: castle 5
+    400012: //RootNode
+    400014: pCone1
+    400016: pCone11
+    400018: pCone12
+    400020: pCone13
+    400022: pCone14
+    400024: pCone15
+    400026: pCone16
+    400028: pCone17
+    400030: pCone18
+    400032: pCone19
+    400034: pCone2
+    400036: pCone20
+    400038: pCone21
+    400040: pCone22
+    400042: pCone23
+    400044: pCone24
+    400046: pCone25
+    400048: pCone26
+    400050: pCone27
+    400052: pCone28
+    400054: pCone29
+    400056: pCone30
+    400058: pCone31
+    400060: pCone32
+    400062: pCone33
+    400064: pCone33 1
+    400066: pCone33 2
+    400068: pCone33 3
+    400070: pCone33 4
+    400072: pCone33 5
+    400074: pCone33 6
+    400076: pCone33 7
+    400078: pCone34
+    400080: pCone34 1
+    400082: pCone34 10
+    400084: pCone34 11
+    400086: pCone34 12
+    400088: pCone34 13
+    400090: pCone34 2
+    400092: pCone34 3
+    400094: pCone34 4
+    400096: pCone34 5
+    400098: pCone34 6
+    400100: pCone34 7
+    400102: pCone34 8
+    400104: pCone34 9
+    400106: pCone35
+    400108: pCone35 1
+    400110: pCone35 2
+    400112: pCone35 3
+    400114: pCone35 4
+    400116: pCone35 5
+    400118: pCone35 6
+    400120: pCone35 7
+    400122: pCone36
+    400124: pCone36 1
+    400126: pCone36 10
+    400128: pCone36 11
+    400130: pCone36 12
+    400132: pCone36 13
+    400134: pCone36 14
+    400136: pCone36 2
+    400138: pCone36 3
+    400140: pCone36 4
+    400142: pCone36 5
+    400144: pCone36 6
+    400146: pCone36 7
+    400148: pCone36 8
+    400150: pCone36 9
+    400152: pCone37
+    400154: pCone37 1
+    400156: pCone37 2
+    400158: pCone37 3
+    400160: pCone37 4
+    400162: pCone37 5
+    400164: pCone37 6
+    400166: pCone37 7
+    400168: pCone38
+    400170: pCone38 1
+    400172: pCone38 2
+    400174: pCone38 3
+    400176: pCone38 4
+    400178: pCone39
+    400180: pCone39 1
+    400182: pCone39 2
+    400184: pCone39 3
+    400186: pCone39 4
+    400188: pCone39 5
+    400190: pCone4
+    400192: pCone5
+    400194: pCone6
+    400196: pCone7
+    400198: pCone8
+    400200: pCone9
+    400202: pCylinder1
+    400204: pPlane1
+    400206: pPlatonic1
+    400208: pPlatonic10
+    400210: pPlatonic11
+    400212: pPlatonic12
+    400214: pPlatonic13
+    400216: pPlatonic14
+    400218: pPlatonic15
+    400220: pPlatonic16
+    400222: pPlatonic17
+    400224: pPlatonic2
+    400226: pPlatonic3
+    400228: pPlatonic4
+    400230: pPlatonic5
+    400232: pPlatonic6
+    400234: pPlatonic7
+    400236: pPlatonic8
+    400238: pPlatonic9
+    400240: pSphere1
+    400242: pSphere3
+    400244: pSphere3 1
+    400246: pSphere3 10
+    400248: pSphere3 11
+    400250: pSphere3 12
+    400252: pSphere3 13
+    400254: pSphere3 14
+    400256: pSphere3 15
+    400258: pSphere3 16
+    400260: pSphere3 17
+    400262: pSphere3 18
+    400264: pSphere3 19
+    400266: pSphere3 2
+    400268: pSphere3 20
+    400270: pSphere3 21
+    400272: pSphere3 22
+    400274: pSphere3 23
+    400276: pSphere3 24
+    400278: pSphere3 25
+    400280: pSphere3 26
+    400282: pSphere3 27
+    400284: pSphere3 28
+    400286: pSphere3 29
+    400288: pSphere3 3
+    400290: pSphere3 30
+    400292: pSphere3 31
+    400294: pSphere3 32
+    400296: pSphere3 33
+    400298: pSphere3 34
+    400300: pSphere3 35
+    400302: pSphere3 4
+    400304: pSphere3 5
+    400306: pSphere3 6
+    400308: pSphere3 7
+    400310: pSphere3 8
+    400312: pSphere3 9
+    400314: pSphere4
+    400316: pSphere4 1
+    400318: pSphere4 10
+    400320: pSphere4 11
+    400322: pSphere4 12
+    400324: pSphere4 13
+    400326: pSphere4 14
+    400328: pSphere4 15
+    400330: pSphere4 16
+    400332: pSphere4 17
+    400334: pSphere4 2
+    400336: pSphere4 3
+    400338: pSphere4 4
+    400340: pSphere4 5
+    400342: pSphere4 6
+    400344: pSphere4 7
+    400346: pSphere4 8
+    400348: pSphere4 9
+    400350: weed
+    400352: weed1
+    400354: weed2
+    400356: weed3
+    400358: weed4
+    400360: weed4 1
+    400362: weed4 2
+    400364: weed4 3
+    400366: weed4 4
+    400368: weed5
+    400370: weed5 1
+    400372: weed5 2
+    400374: weed5 3
+    400376: weed6
+    400378: weed6 1
+    400380: weed6 2
+    400382: weed6 3
+    400384: weed6 4
+    2100000: lambert1
+    2300000: castle
+    2300002: castle 1
+    2300004: castle 2
+    2300006: castle 3
+    2300008: castle 4
+    2300010: castle 5
+    2300012: pCone1
+    2300014: pCone11
+    2300016: pCone12
+    2300018: pCone13
+    2300020: pCone14
+    2300022: pCone15
+    2300024: pCone16
+    2300026: pCone17
+    2300028: pCone18
+    2300030: pCone19
+    2300032: pCone2
+    2300034: pCone20
+    2300036: pCone21
+    2300038: pCone22
+    2300040: pCone23
+    2300042: pCone24
+    2300044: pCone25
+    2300046: pCone26
+    2300048: pCone27
+    2300050: pCone28
+    2300052: pCone29
+    2300054: pCone30
+    2300056: pCone31
+    2300058: pCone32
+    2300060: pCone33
+    2300062: pCone33 1
+    2300064: pCone33 2
+    2300066: pCone33 3
+    2300068: pCone33 4
+    2300070: pCone33 5
+    2300072: pCone33 6
+    2300074: pCone33 7
+    2300076: pCone34
+    2300078: pCone34 1
+    2300080: pCone34 10
+    2300082: pCone34 11
+    2300084: pCone34 12
+    2300086: pCone34 13
+    2300088: pCone34 2
+    2300090: pCone34 3
+    2300092: pCone34 4
+    2300094: pCone34 5
+    2300096: pCone34 6
+    2300098: pCone34 7
+    2300100: pCone34 8
+    2300102: pCone34 9
+    2300104: pCone35
+    2300106: pCone35 1
+    2300108: pCone35 2
+    2300110: pCone35 3
+    2300112: pCone35 4
+    2300114: pCone35 5
+    2300116: pCone35 6
+    2300118: pCone35 7
+    2300120: pCone36
+    2300122: pCone36 1
+    2300124: pCone36 10
+    2300126: pCone36 11
+    2300128: pCone36 12
+    2300130: pCone36 13
+    2300132: pCone36 14
+    2300134: pCone36 2
+    2300136: pCone36 3
+    2300138: pCone36 4
+    2300140: pCone36 5
+    2300142: pCone36 6
+    2300144: pCone36 7
+    2300146: pCone36 8
+    2300148: pCone36 9
+    2300150: pCone37
+    2300152: pCone37 1
+    2300154: pCone37 2
+    2300156: pCone37 3
+    2300158: pCone37 4
+    2300160: pCone37 5
+    2300162: pCone37 6
+    2300164: pCone37 7
+    2300166: pCone38
+    2300168: pCone38 1
+    2300170: pCone38 2
+    2300172: pCone38 3
+    2300174: pCone38 4
+    2300176: pCone39
+    2300178: pCone39 1
+    2300180: pCone39 2
+    2300182: pCone39 3
+    2300184: pCone39 4
+    2300186: pCone39 5
+    2300188: pCone4
+    2300190: pCone5
+    2300192: pCone6
+    2300194: pCone7
+    2300196: pCone8
+    2300198: pCone9
+    2300200: pCylinder1
+    2300202: pPlane1
+    2300204: pPlatonic1
+    2300206: pPlatonic10
+    2300208: pPlatonic11
+    2300210: pPlatonic12
+    2300212: pPlatonic13
+    2300214: pPlatonic14
+    2300216: pPlatonic15
+    2300218: pPlatonic16
+    2300220: pPlatonic17
+    2300222: pPlatonic2
+    2300224: pPlatonic3
+    2300226: pPlatonic4
+    2300228: pPlatonic5
+    2300230: pPlatonic6
+    2300232: pPlatonic7
+    2300234: pPlatonic8
+    2300236: pPlatonic9
+    2300238: pSphere1
+    2300240: pSphere3
+    2300242: pSphere3 1
+    2300244: pSphere3 10
+    2300246: pSphere3 11
+    2300248: pSphere3 12
+    2300250: pSphere3 13
+    2300252: pSphere3 14
+    2300254: pSphere3 15
+    2300256: pSphere3 16
+    2300258: pSphere3 17
+    2300260: pSphere3 18
+    2300262: pSphere3 19
+    2300264: pSphere3 2
+    2300266: pSphere3 20
+    2300268: pSphere3 21
+    2300270: pSphere3 22
+    2300272: pSphere3 23
+    2300274: pSphere3 24
+    2300276: pSphere3 25
+    2300278: pSphere3 26
+    2300280: pSphere3 27
+    2300282: pSphere3 28
+    2300284: pSphere3 29
+    2300286: pSphere3 3
+    2300288: pSphere3 30
+    2300290: pSphere3 31
+    2300292: pSphere3 32
+    2300294: pSphere3 33
+    2300296: pSphere3 34
+    2300298: pSphere3 35
+    2300300: pSphere3 4
+    2300302: pSphere3 5
+    2300304: pSphere3 6
+    2300306: pSphere3 7
+    2300308: pSphere3 8
+    2300310: pSphere3 9
+    2300312: pSphere4
+    2300314: pSphere4 1
+    2300316: pSphere4 10
+    2300318: pSphere4 11
+    2300320: pSphere4 12
+    2300322: pSphere4 13
+    2300324: pSphere4 14
+    2300326: pSphere4 15
+    2300328: pSphere4 16
+    2300330: pSphere4 17
+    2300332: pSphere4 2
+    2300334: pSphere4 3
+    2300336: pSphere4 4
+    2300338: pSphere4 5
+    2300340: pSphere4 6
+    2300342: pSphere4 7
+    2300344: pSphere4 8
+    2300346: pSphere4 9
+    2300348: weed
+    2300350: weed1
+    2300352: weed2
+    2300354: weed3
+    2300356: weed4
+    2300358: weed4 1
+    2300360: weed4 2
+    2300362: weed4 3
+    2300364: weed4 4
+    2300366: weed5
+    2300368: weed5 1
+    2300370: weed5 2
+    2300372: weed5 3
+    2300374: weed6
+    2300376: weed6 1
+    2300378: weed6 2
+    2300380: weed6 3
+    2300382: weed6 4
+    3300000: castle
+    3300002: castle 1
+    3300004: castle 2
+    3300006: castle 3
+    3300008: castle 4
+    3300010: castle 5
+    3300012: pCone1
+    3300014: pCone11
+    3300016: pCone12
+    3300018: pCone13
+    3300020: pCone14
+    3300022: pCone15
+    3300024: pCone16
+    3300026: pCone17
+    3300028: pCone18
+    3300030: pCone19
+    3300032: pCone2
+    3300034: pCone20
+    3300036: pCone21
+    3300038: pCone22
+    3300040: pCone23
+    3300042: pCone24
+    3300044: pCone25
+    3300046: pCone26
+    3300048: pCone27
+    3300050: pCone28
+    3300052: pCone29
+    3300054: pCone30
+    3300056: pCone31
+    3300058: pCone32
+    3300060: pCone33
+    3300062: pCone33 1
+    3300064: pCone33 2
+    3300066: pCone33 3
+    3300068: pCone33 4
+    3300070: pCone33 5
+    3300072: pCone33 6
+    3300074: pCone33 7
+    3300076: pCone34
+    3300078: pCone34 1
+    3300080: pCone34 10
+    3300082: pCone34 11
+    3300084: pCone34 12
+    3300086: pCone34 13
+    3300088: pCone34 2
+    3300090: pCone34 3
+    3300092: pCone34 4
+    3300094: pCone34 5
+    3300096: pCone34 6
+    3300098: pCone34 7
+    3300100: pCone34 8
+    3300102: pCone34 9
+    3300104: pCone35
+    3300106: pCone35 1
+    3300108: pCone35 2
+    3300110: pCone35 3
+    3300112: pCone35 4
+    3300114: pCone35 5
+    3300116: pCone35 6
+    3300118: pCone35 7
+    3300120: pCone36
+    3300122: pCone36 1
+    3300124: pCone36 10
+    3300126: pCone36 11
+    3300128: pCone36 12
+    3300130: pCone36 13
+    3300132: pCone36 14
+    3300134: pCone36 2
+    3300136: pCone36 3
+    3300138: pCone36 4
+    3300140: pCone36 5
+    3300142: pCone36 6
+    3300144: pCone36 7
+    3300146: pCone36 8
+    3300148: pCone36 9
+    3300150: pCone37
+    3300152: pCone37 1
+    3300154: pCone37 2
+    3300156: pCone37 3
+    3300158: pCone37 4
+    3300160: pCone37 5
+    3300162: pCone37 6
+    3300164: pCone37 7
+    3300166: pCone38
+    3300168: pCone38 1
+    3300170: pCone38 2
+    3300172: pCone38 3
+    3300174: pCone38 4
+    3300176: pCone39
+    3300178: pCone39 1
+    3300180: pCone39 2
+    3300182: pCone39 3
+    3300184: pCone39 4
+    3300186: pCone39 5
+    3300188: pCone4
+    3300190: pCone5
+    3300192: pCone6
+    3300194: pCone7
+    3300196: pCone8
+    3300198: pCone9
+    3300200: pCylinder1
+    3300202: pPlane1
+    3300204: pPlatonic1
+    3300206: pPlatonic10
+    3300208: pPlatonic11
+    3300210: pPlatonic12
+    3300212: pPlatonic13
+    3300214: pPlatonic14
+    3300216: pPlatonic15
+    3300218: pPlatonic16
+    3300220: pPlatonic17
+    3300222: pPlatonic2
+    3300224: pPlatonic3
+    3300226: pPlatonic4
+    3300228: pPlatonic5
+    3300230: pPlatonic6
+    3300232: pPlatonic7
+    3300234: pPlatonic8
+    3300236: pPlatonic9
+    3300238: pSphere1
+    3300240: pSphere3
+    3300242: pSphere3 1
+    3300244: pSphere3 10
+    3300246: pSphere3 11
+    3300248: pSphere3 12
+    3300250: pSphere3 13
+    3300252: pSphere3 14
+    3300254: pSphere3 15
+    3300256: pSphere3 16
+    3300258: pSphere3 17
+    3300260: pSphere3 18
+    3300262: pSphere3 19
+    3300264: pSphere3 2
+    3300266: pSphere3 20
+    3300268: pSphere3 21
+    3300270: pSphere3 22
+    3300272: pSphere3 23
+    3300274: pSphere3 24
+    3300276: pSphere3 25
+    3300278: pSphere3 26
+    3300280: pSphere3 27
+    3300282: pSphere3 28
+    3300284: pSphere3 29
+    3300286: pSphere3 3
+    3300288: pSphere3 30
+    3300290: pSphere3 31
+    3300292: pSphere3 32
+    3300294: pSphere3 33
+    3300296: pSphere3 34
+    3300298: pSphere3 35
+    3300300: pSphere3 4
+    3300302: pSphere3 5
+    3300304: pSphere3 6
+    3300306: pSphere3 7
+    3300308: pSphere3 8
+    3300310: pSphere3 9
+    3300312: pSphere4
+    3300314: pSphere4 1
+    3300316: pSphere4 10
+    3300318: pSphere4 11
+    3300320: pSphere4 12
+    3300322: pSphere4 13
+    3300324: pSphere4 14
+    3300326: pSphere4 15
+    3300328: pSphere4 16
+    3300330: pSphere4 17
+    3300332: pSphere4 2
+    3300334: pSphere4 3
+    3300336: pSphere4 4
+    3300338: pSphere4 5
+    3300340: pSphere4 6
+    3300342: pSphere4 7
+    3300344: pSphere4 8
+    3300346: pSphere4 9
+    3300348: weed
+    3300350: weed1
+    3300352: weed2
+    3300354: weed3
+    3300356: weed4
+    3300358: weed4 1
+    3300360: weed4 2
+    3300362: weed4 3
+    3300364: weed4 4
+    3300366: weed5
+    3300368: weed5 1
+    3300370: weed5 2
+    3300372: weed5 3
+    3300374: weed6
+    3300376: weed6 1
+    3300378: weed6 2
+    3300380: weed6 3
+    3300382: weed6 4
+    4300000: pSphere1
+    4300002: pCylinder1
+    4300004: pPlatonic1
+    4300006: pCone2
+    4300008: pCone4
+    4300010: pCone5
+    4300012: pCone6
+    4300014: pCone7
+    4300016: pCone8
+    4300018: pCone9
+    4300020: pCone11
+    4300022: pCone12
+    4300024: pCone13
+    4300026: pCone14
+    4300028: pCone15
+    4300030: pCone16
+    4300032: pCone17
+    4300034: pCone18
+    4300036: pCone19
+    4300038: pCone20
+    4300040: pCone21
+    4300042: pCone22
+    4300044: pCone23
+    4300046: pCone24
+    4300048: pCone25
+    4300050: pCone26
+    4300052: pCone27
+    4300054: pCone28
+    4300056: pCone29
+    4300058: pCone30
+    4300060: pCone31
+    4300062: pCone32
+    4300064: pCone1
+    4300066: weed3
+    4300068: pSphere3
+    4300070: pSphere4
+    4300072: pSphere3
+    4300074: weed2
+    4300076: pSphere3
+    4300078: pSphere4
+    4300080: pSphere3
+    4300082: weed1
+    4300084: pSphere3
+    4300086: pSphere4
+    4300088: pSphere3
+    4300090: weed
+    4300092: pSphere3
+    4300094: pSphere4
+    4300096: pSphere3
+    4300098: pPlatonic2
+    4300100: castle
+    4300102: pCone39
+    4300104: pCone34
+    4300106: pCone35
+    4300108: pCone36
+    4300110: pCone37
+    4300112: pCone38
+    4300114: pCone33
+    4300116: weed4
+    4300118: pSphere3
+    4300120: pSphere4
+    4300122: pSphere3
+    4300124: weed5
+    4300126: pSphere3
+    4300128: pSphere4
+    4300130: pSphere3
+    4300132: weed6
+    4300134: pSphere3
+    4300136: pSphere4
+    4300138: pSphere3
+    4300140: pPlane1
+    4300142: pPlatonic3
+    4300144: castle
+    4300146: pCone39
+    4300148: pCone34
+    4300150: pCone35
+    4300152: pCone36
+    4300154: pCone37
+    4300156: pCone38
+    4300158: pCone33
+    4300160: weed4
+    4300162: pSphere3
+    4300164: pSphere4
+    4300166: pSphere3
+    4300168: weed5
+    4300170: pSphere3
+    4300172: pSphere4
+    4300174: pSphere3
+    4300176: weed6
+    4300178: pSphere3
+    4300180: pSphere4
+    4300182: pSphere3
+    4300184: pPlatonic4
+    4300186: pCone34
+    4300188: pCone36
+    4300190: pPlatonic5
+    4300192: castle
+    4300194: pCone39
+    4300196: pCone34
+    4300198: pCone35
+    4300200: pCone36
+    4300202: pCone33
+    4300204: weed4
+    4300206: pSphere3
+    4300208: pSphere4
+    4300210: pSphere3
+    4300212: weed6
+    4300214: pSphere3
+    4300216: pSphere4
+    4300218: pSphere3
+    4300220: pPlatonic6
+    4300222: castle
+    4300224: pCone39
+    4300226: pCone34
+    4300228: pCone35
+    4300230: pCone36
+    4300232: pCone37
+    4300234: pCone38
+    4300236: pCone33
+    4300238: weed4
+    4300240: pSphere3
+    4300242: pSphere4
+    4300244: pSphere3
+    4300246: weed5
+    4300248: pSphere3
+    4300250: pSphere4
+    4300252: pSphere3
+    4300254: weed6
+    4300256: pSphere3
+    4300258: pSphere4
+    4300260: pSphere3
+    4300262: pPlatonic7
+    4300264: castle
+    4300266: pCone39
+    4300268: pCone34
+    4300270: pCone36
+    4300272: pCone37
+    4300274: pCone38
+    4300276: pCone33
+    4300278: weed4
+    4300280: pSphere3
+    4300282: pSphere4
+    4300284: pSphere3
+    4300286: weed5
+    4300288: pSphere3
+    4300290: pSphere4
+    4300292: pSphere3
+    4300294: weed6
+    4300296: pSphere3
+    4300298: pSphere4
+    4300300: pSphere3
+    4300302: pPlatonic8
+    4300304: castle
+    4300306: pCone39
+    4300308: pCone34
+    4300310: pCone35
+    4300312: pCone37
+    4300314: pCone38
+    4300316: pPlatonic9
+    4300318: pCone34
+    4300320: pCone36
+    4300322: pPlatonic10
+    4300324: pCone34
+    4300326: pCone36
+    4300328: pPlatonic11
+    4300330: pCone34
+    4300332: pCone35
+    4300334: pCone36
+    4300336: pCone37
+    4300338: pCone33
+    4300340: pPlatonic12
+    4300342: pCone34
+    4300344: pCone36
+    4300346: pPlatonic13
+    4300348: pCone34
+    4300350: pCone35
+    4300352: pCone36
+    4300354: pCone37
+    4300356: pCone33
+    4300358: pPlatonic14
+    4300360: pCone34
+    4300362: pCone35
+    4300364: pCone36
+    4300366: pCone37
+    4300368: pCone33
+    4300370: pPlatonic15
+    4300372: pCone36
+    4300374: pPlatonic16
+    4300376: pCone34
+    4300378: pCone36
+    4300380: pPlatonic17
+    4300382: pCone36
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
