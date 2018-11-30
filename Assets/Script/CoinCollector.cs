@@ -27,10 +27,6 @@ public class CoinCollector : MonoBehaviour {
             other.gameObject.SetActive(false);
             coinsObtained++;
 
-            PlanetSpawner ps;
-            if (ps = other.gameObject.GetComponent<PlanetSpawner>())
-                ps.activeSpawns--;
-
             int coinsToNextJet = coinsPerOrb[Mathf.Min(orbsObtained - 1, coinsPerOrb.Length - 1)];
             if (coinsObtained == coinsToNextJet && orbsObtained < orbs.Count)
             {

@@ -12455,6 +12455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591685440}
   - component: {fileID: 591685439}
+  - component: {fileID: 591685438}
   m_Layer: 0
   m_Name: solarSystemManager
   m_TagString: Untagged
@@ -12462,6 +12463,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &591685438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591685437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e9d5c8280488242a31dbe83e583c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 1230071465133346, guid: 4c92f2dff396f70418b021c0a5e541ae,
+    type: 2}
+  meshSpawners:
+  - {fileID: 1142676006}
+  respawnThreshold: 0.5
+  useColors: 1
 --- !u!114 &591685439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12584,6 +12602,60 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615936279}
   m_Mesh: {fileID: 4300026, guid: 1e44bfaae9fe44776aab24c1a03944dd, type: 3}
+--- !u!1001 &634969676
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 596.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -43.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -586.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.9747063
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.08731544
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03359939
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.20296484
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 171.41699
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 171.41704
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 171.41704
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36f52f052d0ae264e8a6839c314ec4a4, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &648513547
 GameObject:
   m_ObjectHideFlags: 0
@@ -14385,6 +14457,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1098851413}
   m_Mesh: {fileID: 4300002, guid: 1e44bfaae9fe44776aab24c1a03944dd, type: 3}
+--- !u!1 &1142676006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 36f52f052d0ae264e8a6839c314ec4a4,
+    type: 3}
+  m_PrefabInternal: {fileID: 634969676}
 --- !u!1 &1165580102
 GameObject:
   m_ObjectHideFlags: 0
@@ -15479,7 +15556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcabac17bc06d8347b6610a6597bcb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnType: 0
+  spawnType: 1
   spawnPrefab: {fileID: 1230071465133346, guid: 4c92f2dff396f70418b021c0a5e541ae,
     type: 2}
   respawnThreshold: 0.5

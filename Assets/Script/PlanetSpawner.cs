@@ -15,6 +15,7 @@ public class PlanetSpawner : MonoBehaviour {
     public SpawnType spawnType;
     public GameObject spawnPrefab;
     public float respawnThreshold = 0.5f; // fraction of initial spawns remaining before respawn
+    public float respawnDelay = 1f;
     public float cullRadius = 5f; // guaranteed distance in m^2 between spawns 
 
     // Uniform Random - Spawns a specified number by uniformly randomly picking positions
@@ -56,16 +57,21 @@ public class PlanetSpawner : MonoBehaviour {
 
     void Update() {
         if (activeSpawns < respawnThreshold * initialSpawns)
-        {
-            foreach(GameObject obj in spawnedObjects)
-            {
-                obj.SetActive(true);
-            }
-            activeSpawns = initialSpawns;
-        }
+            StartCoroutine(WaitAndRespawn());
     }
 
-    public void SpawnMesh()
+    private IEnumerator WaitAndRespawn()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+
+        foreach (GameObject obj in spawnedObjects)
+        {
+            obj.SetActive(true);
+        }
+        activeSpawns = initialSpawns;
+    }
+
+    private void SpawnMesh()
     {
         MeshFilter m;
         if (!meshSpawner)
@@ -84,7 +90,7 @@ public class PlanetSpawner : MonoBehaviour {
         {
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(vertex.normalized);
 
-            if (!CheckSpawnDistanceThreshold(spawnPosition))
+            if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
             {
                 Quaternion q = Quaternion.FromToRotation(Vector3.up, vertex.normalized);
                 SpawnObject(spawnPosition, q);
@@ -92,7 +98,7 @@ public class PlanetSpawner : MonoBehaviour {
         }
     }
 
-    public void SpawnSpherical()
+    private void SpawnSpherical()
     {
         if (sphereUp == Vector3.zero)
             sphereUp = Vector3.up;
@@ -120,7 +126,7 @@ public class PlanetSpawner : MonoBehaviour {
                 }
 
                 Vector3 spawnPosition = GetSpawnPositionFromUnitVector(v);
-                if (!CheckSpawnDistanceThreshold(spawnPosition))
+                if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
                 {
                     Quaternion q = Quaternion.FromToRotation(Vector3.up, v);
                     SpawnObject(spawnPosition, q);
@@ -129,36 +135,19 @@ public class PlanetSpawner : MonoBehaviour {
         }
     }
 
-    public void SpawnUniformlyRandom()
+    private void SpawnUniformlyRandom()
     {
         for (int i = 0; i < randomSpawns; i++)
         {
-            float u1 = Random.Range(-1.0f, 1.0f);
-            float u2 = Random.Range(0.0f, 1.0f);
-            Vector3 sample = UniformSphereSampler(u1, u2).normalized;
+            Vector3 sample = Random.onUnitSphere;
 
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(sample);
-            if (!CheckSpawnDistanceThreshold(spawnPosition))
+            if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
             {
                 Quaternion q = Quaternion.FromToRotation(Vector3.up, sample);
                 SpawnObject(spawnPosition, q);
             }
         }
-    }
-
-    private bool CheckSpawnDistanceThreshold(Vector3 p)
-    {
-        if (cullRadius == 0)
-            return false;
-
-        Collider[] inRadius = Physics.OverlapSphere(p, cullRadius);
-        foreach(Collider c in inRadius)
-        {
-            if (c.gameObject.CompareTag("coin") /*|| c.gameObject.CompareTag("planetSpawn")*/)
-                return true;
-        }
-
-        return false;
     }
 
     private Vector3 GetSpawnPositionFromUnitVector(Vector3 v)
@@ -176,15 +165,18 @@ public class PlanetSpawner : MonoBehaviour {
         spawnedObjects.Add(obj);
     }
 
-    // From http://mathworld.wolfram.com/SpherePointPicking.html
-    private Vector3 UniformSphereSampler(float u1, float u2)
+    public static bool CheckSpawnDistanceThreshold(Vector3 p, float cull)
     {
-        float r = Mathf.Sqrt(1 - u1 * u1);
-        float theta = 2 * Mathf.PI * u2;
+        if (cull == 0)
+            return false;
 
-        float x = r * Mathf.Cos(theta);
-        float y = r * Mathf.Sin(theta);
+        Collider[] inRadius = Physics.OverlapSphere(p, cull);
+        foreach (Collider c in inRadius)
+        {
+            if (c.gameObject.CompareTag("coin"))
+                return true;
+        }
 
-        return new Vector3(x, y, u1);
+        return false;
     }
 }
