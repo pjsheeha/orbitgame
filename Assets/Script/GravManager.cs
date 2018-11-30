@@ -36,7 +36,7 @@ public class GravManager : MonoBehaviour
                 Vector3 bodyUp = hasGravity[i].transform.up;
 
                 Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, forceMagnitude * downVec) * hasGravity[i].transform.rotation;
-                hasGravity[i].transform.rotation = Quaternion.Slerp(hasGravity[i].transform.rotation, targetRotation, 2 * Time.deltaTime);
+                hasGravity[i].transform.rotation = Quaternion.Slerp(hasGravity[i].transform.rotation, targetRotation,  Time.deltaTime);
 
                 if (hasGravity[i].name != "CameraCube")
                 {

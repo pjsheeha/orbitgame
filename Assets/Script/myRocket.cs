@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class myRocket : MonoBehaviour {
 	public GameObject myrocke;
+	public GameObject myCyli;
 	// Use this for initialization
 	void Start () {
 		
