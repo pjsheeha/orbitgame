@@ -44,11 +44,17 @@ public class MovementScript : MonoBehaviour {
                 {
                     string charWhich = currOrb.name;
                     currOrb.GetComponent<MeshRenderer>().material = normMat;
-
+                    //currOrb.GetChild(0).gameObject.setActive(false);
+                    if (!Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
+                    {
+                    currOrb.GetComponent<myRocket>().myrocke.SetActive(false);
+                    }
                     if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
                         playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = .1f * playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed;
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
+                        //currOrb.GetChild(0).gameObject.setActive(true);
+                        currOrb.GetComponent<myRocket>().myrocke.SetActive(true);
                         if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
                         {
                             pressedObjects.Add(currOrb);
