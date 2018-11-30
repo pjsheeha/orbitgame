@@ -30,7 +30,8 @@ public class MovementScript : MonoBehaviour {
     void Update()
     {
         print("ssss");
-
+                //camCube.GetComponent<followPosition>().leader = gameObject;
+//        camCube.GetComponent<followPosition>().LookAngle += 5;
         for (int i = 0; i < playerOrbits.Count; i++)
         {
             GameObject thisOrbit = playerOrbits[i];
@@ -48,15 +49,15 @@ public class MovementScript : MonoBehaviour {
                     if (!Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
                     currOrb.GetComponent<myRocket>().myrocke.SetActive(false);
-                    camCube.GetComponent<followPosition>().leader = gameObject.transform.position;
                     }
+
                     if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
                         playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = .1f * playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed;
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
                         //currOrb.GetChild(0).gameObject.setActive(true);
                         currOrb.GetComponent<myRocket>().myrocke.SetActive(true);
-                        camCube.GetComponent<followPosition>().leader = currOrb.GetComponent<myRocket>().myCyli.transform.up;
+                        //camCube.GetComponent<followPosition>().leader = currOrb.GetComponent<myRocket>().myCyli.gameObject;
                         if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
                         {
                             pressedObjects.Add(currOrb);
@@ -93,6 +94,7 @@ public class MovementScript : MonoBehaviour {
                     //     }
                 }
                 pressedObjects.Clear();
+
 
             }
         }

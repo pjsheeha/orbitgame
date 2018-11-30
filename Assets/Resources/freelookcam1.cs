@@ -74,6 +74,7 @@ using UnityStandardAssets.Cameras;
             if (m_Target == null) return;
             // Move the rig towards target position.
             transform.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime * m_MoveSpeed);
+
         }
 
 
