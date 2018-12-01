@@ -175,11 +175,6 @@ public class PlanetSpawner : MonoBehaviour {
             return Vector3.zero;
         }
 
-        if (!hit.collider.gameObject.CompareTag("terrain"))
-        {
-            Debug.Log("Hit non-terrain object " + hit.collider.gameObject.transform.name + "!");
-        }
-
         return hit.point;
     }
 
