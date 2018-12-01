@@ -29,9 +29,6 @@ public class MovementScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        print("ssss");
-                //camCube.GetComponent<followPosition>().leader = gameObject;
-//        camCube.GetComponent<followPosition>().LookAngle += 5;
         for (int i = 0; i < playerOrbits.Count; i++)
         {
             GameObject thisOrbit = playerOrbits[i];

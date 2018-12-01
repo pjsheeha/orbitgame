@@ -5,6 +5,8 @@ using UnityEngine;
 //Attach to planet
 public class PlanetSpawner : MonoBehaviour {
 
+    public GameObject atmosphere;
+
     public enum SpawnType
     {
         UniformRandom,
@@ -33,7 +35,19 @@ public class PlanetSpawner : MonoBehaviour {
     private int initialSpawns;
     public int activeSpawns;
 
+    private int layerMask;
+    private float distToAtmosphere;
+    private float distToPlanet;
+    private float maxDistRay;
+
     void Start() {
+
+        layerMask = ~(1 << 2);
+        distToAtmosphere = transform.localScale.x * atmosphere.transform.localScale.x * atmosphere.GetComponent<SphereCollider>().radius;
+        distToPlanet = transform.localScale.x * GetComponent<SphereCollider>().radius;
+        maxDistRay = distToAtmosphere - distToPlanet + 1;
+
+        Debug.Log(distToAtmosphere + " " + distToPlanet + " " + maxDistRay);
 
         spawnedObjects = new List<GameObject>();
         switch (spawnType)
@@ -90,7 +104,7 @@ public class PlanetSpawner : MonoBehaviour {
         {
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(vertex.normalized);
 
-            if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
+            if (spawnPosition != Vector3.zero && !CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
             {
                 Quaternion q = Quaternion.FromToRotation(Vector3.up, vertex.normalized);
                 SpawnObject(spawnPosition, q);
@@ -126,7 +140,7 @@ public class PlanetSpawner : MonoBehaviour {
                 }
 
                 Vector3 spawnPosition = GetSpawnPositionFromUnitVector(v);
-                if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
+                if (spawnPosition != Vector3.zero && !CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
                 {
                     Quaternion q = Quaternion.FromToRotation(Vector3.up, v);
                     SpawnObject(spawnPosition, q);
@@ -142,7 +156,7 @@ public class PlanetSpawner : MonoBehaviour {
             Vector3 sample = Random.onUnitSphere;
 
             Vector3 spawnPosition = GetSpawnPositionFromUnitVector(sample);
-            if (!CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
+            if (spawnPosition != Vector3.zero && !CheckSpawnDistanceThreshold(spawnPosition, cullRadius))
             {
                 Quaternion q = Quaternion.FromToRotation(Vector3.up, sample);
                 SpawnObject(spawnPosition, q);
@@ -152,7 +166,21 @@ public class PlanetSpawner : MonoBehaviour {
 
     private Vector3 GetSpawnPositionFromUnitVector(Vector3 v)
     {
-        return transform.position + transform.localScale.x * GetComponent<SphereCollider>().radius * v;
+        Vector3 startPosition = transform.position + distToAtmosphere * v;
+        RaycastHit hit;
+        if (!(Physics.Raycast(startPosition, -v, out hit, distToAtmosphere, layerMask)))
+        {
+            Debug.Log("Raycast " + v + " from " + transform.name + " didn't hit!");
+            Debug.DrawRay(startPosition, -v);
+            return Vector3.zero;
+        }
+
+        if (!hit.collider.gameObject.CompareTag("terrain"))
+        {
+            Debug.Log("Hit non-terrain object " + hit.collider.gameObject.transform.name + "!");
+        }
+
+        return hit.point;
     }
 
     private void SpawnObject(Vector3 position, Quaternion q)
