@@ -15,8 +15,11 @@ public class GravManager : MonoBehaviour
 
     void Start()
     {
-        multiplier *= Mathf.Pow(playerPlanet.transform.localScale.x, 2);      
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("hasPhysics"))
+        multiplier *= Mathf.Pow(playerPlanet.transform.localScale.x, 2);
+        List<GameObject> gravityList = new List<GameObject>(GameObject.FindGameObjectsWithTag("hasPhysics"));
+        gravityList.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        
+        foreach (GameObject obj in gravityList)
         {
             hasGravity.Add(obj.gameObject);
         }
