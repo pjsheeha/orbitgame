@@ -29,6 +29,7 @@ public class MovementScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
         for (int i = 0; i < playerOrbits.Count; i++)
         {
             GameObject thisOrbit = playerOrbits[i];
