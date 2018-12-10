@@ -83,6 +83,7 @@ public class Destructible : MonoBehaviour {
                 GameObject shard = new GameObject(transform.name + "-shard" + submesh + "-" + (i / 3));
                 shard.transform.position = transform.position;
                 shard.transform.rotation = transform.rotation;
+                shard.transform.localScale = transform.localScale;
                 shard.AddComponent<MeshRenderer>().material = mr.materials[submesh];
                 shard.AddComponent<MeshFilter>().mesh = newMesh;
                 shard.AddComponent<BoxCollider>();
