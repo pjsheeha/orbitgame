@@ -21,27 +21,12 @@ GameObject:
   - component: {fileID: 4092875000252142}
   - component: {fileID: 33124802456930342}
   - component: {fileID: 23871844390293876}
-  - component: {fileID: 135451310935296446}
   - component: {fileID: 114158775281433084}
   - component: {fileID: 114123154614117924}
+  - component: {fileID: 65114608739589928}
+  - component: {fileID: 135001575090933318}
   m_Layer: 0
   m_Name: testTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1805442268840552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4983818524020788}
-  - component: {fileID: 65209577882742086}
-  m_Layer: 0
-  m_Name: turretCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,22 +41,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 127.5, y: 0, z: -7.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4983818524020788}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4983818524020788
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1805442268840552}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4092875000252142}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23871844390293876
@@ -116,12 +87,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568663902964672}
   m_Mesh: {fileID: 4300000, guid: 38b4a5782f4192b46a4714b27efa5c68, type: 3}
---- !u!65 &65209577882742086
+--- !u!65 &65114608739589928
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1805442268840552}
+  m_GameObject: {fileID: 1568663902964672}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -139,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937e4c7bf5021874ab4847682477891d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToDestroy: 100
+  pointsToDestroy: 20
   pointsEarned: 5
   explode: 1
   explodeForce: 500
@@ -157,12 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1fd354b96a82d4197708425aa433bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1161065913389266, guid: 561668a51bbcb9b44919530eb6649e14,
+    type: 2}
   fireDelay: 3
   bulletSpeed: 50
-  minAccuracyRadius: 0.1
+  minAccuracyRadius: 5
   accuracyFalloff: 0
---- !u!135 &135451310935296446
+--- !u!135 &135001575090933318
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
