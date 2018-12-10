@@ -1,0 +1,184 @@
+title: Start
+tags: 
+colorID: 0
+position: -17,212
+---
+Hello, this is a super simple Yarn example
+[[What is Yarn?|Yarn]]
+===
+title: Yarn
+tags: 
+colorID: 0
+position: 231,203
+---
+Yarn is a hypertext editor similar to Twine.
+It allows you to create dialogue trees visually
+and produces special text files that can be imported in Unity
+and parsed through a library called YarnSpinner
+[[What is Twine?|Twine]]
+[[What is Unity?|Unity]]
+[[Special text? YarnSpinner?|Format]]
+[[Nice, teach me some tricks!|Nodes]]
+===
+title: Twine
+tags: 
+colorID: 0
+position: 518,199
+---
+Twine is a popular tool for the creation of interactive stories
+It's very limited though, and it's not very useful for non text-oriented games
+You can export your Twine project as "twee" files and reinport them in Yarn
+[[Twee? Text? I'm already confused|Format]]
+===
+title: Format
+tags: 
+colorID: 0
+position: 526,434
+---
+Ok, let's break it down piece by piece:
+Yarn is a dialogue system inspired by Twine
+It was created by Alec Holowka for "Night in the Woods"
+And it's both a language and a visual editor
+[[Go on...|YarnSpinner]]
+[[Night in the Woods?|NITW]]
+===
+title: Unity
+tags: 
+colorID: 0
+position: -20,463
+---
+Aaaargh
+===
+title: NITW
+tags: 
+colorID: 0
+position: 787,439
+---
+It's a cool narrative game about a dropout cat
+returning to his rust belt hometown and struggling to grow up
+Look it up
+[[Ok|YarnSpinner]]
+===
+title: YarnSpinner
+tags: 
+colorID: 0
+position: 537,679
+---
+YarnSpinner is a free library for Unity 
+it's made by some folks in Australia
+YarnSpinner takes Yarn files and parses them
+That is: it breakes them into lines and options
+in a way that is understandable by Unity
+[[Sounds cool|YarnSpinner2]]
+[[Wait what is Unity again?|Unity]]
+===
+title: YarnSpinner2
+tags: 
+colorID: 0
+position: 542,919
+---
+It also does many other things like calling funtions from dialogues
+so you can change the expression of a character during a conversation
+and storing and changing variables
+so your characters can remember player choices...
+But that's the subject of an advanced example
+[[Nice, I'm going to make my own game now|UI]]
+===
+title: UI
+tags: 
+colorID: 0
+position: 254,782
+---
+You need to know that YarnSpinner doesn't make assumptions about
+how the dialogue is presented. It can be for a point and click adventure
+or for a 3D open world...
+So you'll have to code the presentation yourself
+I'm providing some examples in the Unity project.
+[[cool|LoopBack]]
+===
+title: Nodes
+tags: 
+colorID: 0
+position: 244,461
+---
+Ok, you know from twine how to create and connect nodes
+but there are more compact ways to implement choices.
+-> Really?
+    Yes this answer is not a node for example
+-> No I don't know twine
+    [[Twine]]
+If you check this node from the editor you'll see how to make a direct jump to another node
+and how to make choices that... uhmmm don't matter
+-> All choices matter!
+    Sure!
+-> Choices don't matter!
+    I aggree!
+[[What about variables?|variables]]
+[[What about customizing the visuals?|UI]]
+===
+title: LoopBack
+tags: 
+colorID: 0
+position: -124,775
+---
+Is there anything else you'd like to know?
+<<if visited("Twine") is false>>
+[[What's Twine?|Twine]]
+<<endif>>
+<<if visited("Variables") is false>>
+[[What about variables?|Variables]]
+<<endif>>
+<<if visited("Format") is false>>
+[[I'm confused, is this Yarn or YarnSpinner?|Format]]
+<<endif>>
+<<if visited("UI") is false>>
+[[What about showing the dialogue in Unity?|UI]]
+<<endif>>
+[[Yes, what's this Unity thing again?|Unity]]
+[[No I'm cool|Goodbye]]
+
+===
+title: Goodbye
+tags: 
+colorID: 0
+position: -119,1118
+---
+Play around with Yarn and then check the advanced example. Bye!
+===
+title: Variables
+tags: 
+colorID: 0
+position: 258,1014
+---
+Yarn allows you to read, write and compare variables within the dialogues
+Tell me something nice!
+-> You are very helpful
+    Thanks!
+    <<set $nice to true>>
+-> No, I don't like you
+    Ouch
+    <<set $nice to false>>
+*Narrator will remember this*
+Well, variables are set and we can move on to another node
+[[Variables2]]
+===
+title: Variables2
+tags: 
+colorID: 0
+position: 251,1222
+---
+...
+...
+Player, I have to tell you something
+<<if $nice is true>>
+I really appreciated what you said earlier
+You know, me being helpful, it means a lot
+<<endif>>
+<<if $nice is false>>
+You really hurt my feelings
+I was just trying to help
+<<endif>>
+Anyway, this intense emotional moment was brought to you by...
+VARIABLES!
+[[LoopBack]]
+===

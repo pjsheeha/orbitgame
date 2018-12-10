@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 873930d897bd946d2831bb4ecfcd65e8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: body
+    100002: body 1
+    100004: eyebro2
+    100006: eyebrow1
+    100008: eyebrow1 1
+    100010: eyebrow2
+    100012: foot1
+    100014: foot1 1
+    100016: foot2
+    100018: foot2 1
+    100020: head
+    100022: head 1
+    100024: //RootNode
+    100026: nose
+    100028: nose 1
+    100030: orbi1
+    100032: orbi2
+    100034: pCone1
+    100036: pCone2
+    100038: pCone3
+    100040: pCone4
+    100042: pCone5
+    100044: pCone6
+    100046: tip
+    100048: tip 1
+    400000: body
+    400002: body 1
+    400004: eyebro2
+    400006: eyebrow1
+    400008: eyebrow1 1
+    400010: eyebrow2
+    400012: foot1
+    400014: foot1 1
+    400016: foot2
+    400018: foot2 1
+    400020: head
+    400022: head 1
+    400024: //RootNode
+    400026: nose
+    400028: nose 1
+    400030: orbi1
+    400032: orbi2
+    400034: pCone1
+    400036: pCone2
+    400038: pCone3
+    400040: pCone4
+    400042: pCone5
+    400044: pCone6
+    400046: tip
+    400048: tip 1
+    2100000: lambert1
+    2300000: body
+    2300002: body 1
+    2300004: eyebro2
+    2300006: eyebrow1
+    2300008: eyebrow1 1
+    2300010: eyebrow2
+    2300012: foot1
+    2300014: foot1 1
+    2300016: foot2
+    2300018: foot2 1
+    2300020: head
+    2300022: head 1
+    2300024: nose
+    2300026: nose 1
+    2300028: orbi1
+    2300030: orbi2
+    2300032: pCone1
+    2300034: pCone2
+    2300036: pCone3
+    2300038: pCone4
+    2300040: pCone5
+    2300042: pCone6
+    2300044: tip
+    2300046: tip 1
+    3300000: body
+    3300002: body 1
+    3300004: eyebro2
+    3300006: eyebrow1
+    3300008: eyebrow1 1
+    3300010: eyebrow2
+    3300012: foot1
+    3300014: foot1 1
+    3300016: foot2
+    3300018: foot2 1
+    3300020: head
+    3300022: head 1
+    3300024: nose
+    3300026: nose 1
+    3300028: orbi1
+    3300030: orbi2
+    3300032: pCone1
+    3300034: pCone2
+    3300036: pCone3
+    3300038: pCone4
+    3300040: pCone5
+    3300042: pCone6
+    3300044: tip
+    3300046: tip 1
+    4300000: orbi1
+    4300002: foot1
+    4300004: foot2
+    4300006: body
+    4300008: head
+    4300010: nose
+    4300012: tip
+    4300014: pCone1
+    4300016: pCone2
+    4300018: pCone3
+    4300020: eyebrow1
+    4300022: eyebro2
+    4300024: orbi2
+    4300026: foot1
+    4300028: foot2
+    4300030: body
+    4300032: head
+    4300034: nose
+    4300036: tip
+    4300038: pCone4
+    4300040: pCone5
+    4300042: pCone6
+    4300044: eyebrow1
+    4300046: eyebrow2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

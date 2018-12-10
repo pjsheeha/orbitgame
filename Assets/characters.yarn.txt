@@ -1,0 +1,56 @@
+title: Smiley
+tags: 
+colorID: 0
+position: 299,110
+---
+Hello, I'm an NPC. It stands for
+Non
+Playable
+<<SetSprite Smiley cat>>
+Cat
+<<SetSprite Smiley cry>>
+ahah
+-> That's funny
+    <<SetSprite Smiley joke>>
+    I'm a joker
+    <<SetSprite Smiley normal>>
+-> what
+    <<SetSprite Smiley sad>>
+    I know I'm not funny at all
+    <<SetSprite Smiley normal>>
+===
+title: Monkey
+tags: 
+colorID: 0
+position: 622,108
+---
+...
+[[Say something|Speak]]
+[[Look...|See]]
+[[Listen...|Hear]]
+[[Ok, bye|End]]
+===
+title: Speak
+tags: 
+colorID: 0
+position: 449,377
+---
+<<SetSprite Monkey monkeySpeak>>
+[[Monkey]]
+===
+title: See
+tags: 
+colorID: 0
+position: 673,378
+---
+<<SetSprite Monkey monkeySee>>
+[[Monkey]]
+===
+title: Hear
+tags: 
+colorID: 0
+position: 885,368
+---
+<<SetSprite Monkey Speak>>
+[[Monkey]]
+===
