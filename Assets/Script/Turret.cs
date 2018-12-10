@@ -71,7 +71,7 @@ public class Turret : MonoBehaviour {
     {
         Vector3 aimVector = AimAtPlayer();
         GameObject bullet = GameObject.Instantiate(bulletPrefab);
-        bullet.transform.position = transform.position + aimVector;
+        bullet.transform.position = transform.position + 5 * aimVector;
         bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * aimVector;
         elapsedSinceLastFire = 0;
     }
@@ -86,7 +86,7 @@ public class Turret : MonoBehaviour {
             case FalloffType.Linear:
                 float accuracyRadius = (vecToPlayer.magnitude / noticeRadius) * minAccuracyRadius;
                 Vector3 offset = Random.insideUnitCircle * accuracyRadius;
-                Vector3 newTarget = transform.position + vecToPlayer.normalized + transform.rotation * offset;
+                Vector3 newTarget = transform.position + vecToPlayer + transform.rotation * offset;
 
                 Debug.DrawRay(transform.position, noticeRadius * (newTarget - transform.position).normalized, Color.white, fireDelay);
 
