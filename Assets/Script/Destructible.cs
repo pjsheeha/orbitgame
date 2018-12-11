@@ -6,6 +6,7 @@ public class Destructible : MonoBehaviour {
 
     public int pointsToDestroy = 0;
     public int pointsEarned = 5;
+    public int maxShards = 20;
 
     public bool explode = true;
     public float explodeForce = 500.0f;
@@ -57,11 +58,16 @@ public class Destructible : MonoBehaviour {
         Vector3[] norms = m.normals;
         Vector2[] uvs = m.uv;
 
+        int numShards = 0;
         for (int submesh = 0; submesh < m.subMeshCount; submesh++)
         {
+            if (numShards >= maxShards) break;
+
             int[] indices = m.GetTriangles(submesh);
             for (int i = 0; i < indices.Length; i += 3)
             {
+                if (numShards >= maxShards) break;
+
                 Vector3[] newVerts = new Vector3[3];
                 Vector3[] newNorms = new Vector3[3];
                 Vector2[] newUvs = new Vector2[3];
@@ -93,6 +99,8 @@ public class Destructible : MonoBehaviour {
                     shard.GetComponent<Rigidbody>().AddExplosionForce(explodeForce, transform.position, explodeRadius);
 
                 Destroy(shard, shardLifetime);
+
+                numShards++;
             }
         }
 
