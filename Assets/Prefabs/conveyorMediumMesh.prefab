@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33850289284136304}
   - component: {fileID: 23715813268529164}
   - component: {fileID: 114069300347131536}
+  - component: {fileID: 65248758929590608}
   m_Layer: 0
   m_Name: conveyorMediumMesh
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987176397430032}
   m_Mesh: {fileID: 4300000, guid: 61e652f10e95bef4c8493418db150a6d, type: 3}
+--- !u!65 &65248758929590608
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987176397430032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 6.2500005, z: 10}
+  m_Center: {x: 0, y: 3.1249998, z: 0}
 --- !u!114 &114069300347131536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsToDestroy: 0
   pointsEarned: 5
+  maxShards: 20
   explode: 1
   explodeForce: 500
   explodeRadius: 30

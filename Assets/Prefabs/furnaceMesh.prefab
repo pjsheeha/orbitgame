@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33630022068399374}
   - component: {fileID: 23533006136701020}
   - component: {fileID: 114914603828465112}
+  - component: {fileID: 65853467829428778}
   m_Layer: 0
   m_Name: furnaceMesh
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899151699319916}
   m_Mesh: {fileID: 4300000, guid: d827d3129698eb74f92210dddc060853, type: 3}
+--- !u!65 &65853467829428778
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899151699319916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 26.25, z: 20}
+  m_Center: {x: 0, y: 13.125, z: 0}
 --- !u!114 &114914603828465112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsToDestroy: 0
   pointsEarned: 5
+  maxShards: 20
   explode: 1
   explodeForce: 500
   explodeRadius: 30
