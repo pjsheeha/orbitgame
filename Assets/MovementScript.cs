@@ -11,12 +11,17 @@ public class MovementScript : MonoBehaviour {
     public float zScale = 0;
     public float zOffset = 0;
     public bool returnIn = false;
+    public float scrollSpeedX = 0;
+    public float scrollSpeedY = 0;
+
+    public string dir = "up"; 
     public int myNum = 0;
     public Material matPressed;
     public bool thrustReverse = false;
     public Material normMat;
     public bool letGo = false;
     public List<GameObject> pressedObjects = new List<GameObject>();
+    public GameObject grid;
     public List<float> playerOrbitSpeeds = new List<float>();
     public Transform target;
    // public List<bool> pressed = new List<bool>();
@@ -30,10 +35,32 @@ public class MovementScript : MonoBehaviour {
     void Update()
     {
 
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            print("WWW");
+            scrollSpeedY = -1;
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            scrollSpeedY = 1;
+
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+
+            scrollSpeedX = -1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+
+            scrollSpeedX = 1;
+        }
         for (int i = 0; i < playerOrbits.Count; i++)
         {
             GameObject thisOrbit = playerOrbits[i];
-            playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = playerOrbitSpeeds[i];
+            //playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = playerOrbitSpeeds[i];
             for (int x = 0; x < thisOrbit.transform.childCount; x++)
             {
 
@@ -46,15 +73,19 @@ public class MovementScript : MonoBehaviour {
                     //currOrb.GetChild(0).gameObject.setActive(false);
                     if (!Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
-                    currOrb.GetComponent<myRocket>().myrocke.SetActive(false);
+                    currOrb.GetComponent<myRocket>().myrocke1.SetActive(false);
+                        currOrb.GetComponent<myRocket>().myrocke2.SetActive(false);
+
                     }
 
                     if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
-                        playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed = .1f * playerOrbits[i].GetComponent<rotateOrbit>().rotateSpeed;
+  
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
                         //currOrb.GetChild(0).gameObject.setActive(true);
-                        currOrb.GetComponent<myRocket>().myrocke.SetActive(true);
+                        currOrb.GetComponent<myRocket>().myrocke1.SetActive(true);
+                        currOrb.GetComponent<myRocket>().myrocke2.SetActive(true);
+
                         //camCube.GetComponent<followPosition>().leader = currOrb.GetComponent<myRocket>().myCyli.gameObject;
                         if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
                         {
@@ -65,7 +96,6 @@ public class MovementScript : MonoBehaviour {
                             if (thrustReverse == true)
                             {
                                 transform.GetComponent<Rigidbody>().AddForce(-pressedObjects[u].transform.up * speed);
-
 
                             }
                             if (thrustReverse == false)
@@ -96,6 +126,13 @@ public class MovementScript : MonoBehaviour {
 
             }
         }
+        float offset = Time.time * scrollSpeedX;
+        float offset2 = Time.time * scrollSpeedY;
+
+        grid.GetComponent<MeshRenderer>().material.SetTextureOffset("_MainTex", new Vector2(offset2, offset));
+
+        scrollSpeedY = 0;
+        scrollSpeedX = 0;
 
 
         /*
