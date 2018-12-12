@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class followPosition : MonoBehaviour {
     public GameObject leader;
+    public bool deleteSelfActivated = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,6 +14,9 @@ public class followPosition : MonoBehaviour {
 	void Update () {
         transform.position = leader.transform.position;
         transform.rotation = leader.transform.rotation;
-
+        if (deleteSelfActivated)
+        {
+            GetComponent<followPosition>().enabled = false;
+        }
 	}
 }

@@ -16,7 +16,8 @@ public class NPCBehavior : MonoBehaviour
     public KeyboardDialogueUI keyboard1;
     public sceneSwitcher sceneswir;
     public DialogueLauncher dialoguemaker;
-
+    public float dspTime = 0;
+    public float timeSpent;
     private List<playerManager> players = new List<playerManager>();
     private AudioSource _AudioSource;
 
@@ -37,6 +38,12 @@ public class NPCBehavior : MonoBehaviour
         if (_AudioSource.isPlaying)
         {
             keyboard1.sound = true;
+            timeSpent += Time.deltaTime;
+            if (timeSpent > dspTime)
+            {
+                GetComponent<AudioSource>().Stop();
+                print("audiostop!");
+            }
         }
         else
         {
@@ -81,20 +88,26 @@ public class NPCBehavior : MonoBehaviour
         }
 
     }
- 
+    [YarnCommand("dspSet")]
+    public void dspSet(string dspco)
+    {
+        dspTime = float.Parse(dspco);
+    }
 
 
     [YarnCommand("MoveOn")]
-    public void MoveOn(string audioName, string dspTime)
+    public void MoveOn(string audioName)
     {
-
+        timeSpent = 0;
         keyboard1.done = false;
        // print("Audio/" + dialoguemaker.dialogueRunner.startNode + "_" + int.Parse(audioNum) + "");
         AudioClip audioClip1 = Resources.Load<AudioClip>("Audio/" + audioName + "");
         GetComponent<AudioSource>().clip = audioClip1;
+        GetComponent<AudioSource>().time = Random.Range(0,40);
+        print(GetComponent<AudioSource>().time);
         GetComponent<AudioSource>().Play();
         keyboard1.sound = true;
-        GetComponent<AudioSource>().SetScheduledEndTime(int.Parse(dspTime));
+        //GetComponent<AudioSource>().SetScheduledEndTime(dspTime);
 
 
     }
@@ -190,9 +203,9 @@ public class NPCBehavior : MonoBehaviour
         {
             sceneswir.switcharena();
         }
-        if (sceneName == "Get100")
+        if (sceneName == "intro")
         {
-            sceneswir.switchGet100();
+            sceneswir.switchIntro();
         }
         if (sceneName == "Tutorial")
         {

@@ -31,7 +31,7 @@ using UnityEngine;
             sceneManager1.GetComponent<DialogueLauncher>().substate = 0;
 
         }
-        public void switchGet100()
+        public void switchIntro()
         {
             for (int i = 0; i < myObjs.Count; i++)
             {
