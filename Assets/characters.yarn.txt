@@ -1,0 +1,64 @@
+title: 0_intro_1
+tags: 
+colorID: 0
+position: 300,110
+---
+<<dspSet Smiley 3.2>>
+<<MoveOn Smiley firstlines>>The destruction was endless.
+===
+title: 0_intro_2
+tags: 
+colorID: 0
+position: 507,166
+---
+<<dspSet Smiley 6>>
+<<MoveOn Smiley firstlines>>Orbi had been out practicing flying. Yet he did not know what was in store for him.
+===
+title: 0_intro_3
+tags: 
+colorID: 0
+position: 775,180
+---
+<<dspSet Smiley 5>>
+<<MoveOn Smiley orbiline>>No signals, and yet I'm close to home. Silence in general... though what's that?
+===
+title: 0_intro_4
+tags: 
+colorID: 0
+position: 1047,224
+---
+<<dspSet Smiley 2>>
+<<MoveOn Smiley firstlines>>And then...
+===
+title: 0_intro_5
+tags: 
+colorID: 0
+position: 162,332
+---
+<<dspSet Smiley 1>>
+<<MoveOn Smiley orbiline>>Oh no.
+===
+title: 0_intro_6
+tags: 
+colorID: 0
+position: 367,422
+---
+<<dspSet Smiley 7>>
+<<MoveOn Smiley firstlines>>Orbi realized he needed to get to his home planet. This ship was a member of the army. It was utterly destroyed. 
+===
+title: 0_intro_7
+tags: 
+colorID: 0
+position: 647,399
+---
+<<dspSet Smiley 8>>
+<<MoveOn Smiley firstlines>>Through the smoke and flames of shipwrecks Orbi discovered the planet was nothing left but a metal core.
+===
+title: 0_intro_8
+tags: 
+colorID: 0
+position: 815,456
+---
+<<dspSet Smiley 3>>
+<<MoveOn Smiley firstlines>>He landed, hoping to find a survivor, as impossible as that sounded.
+===

@@ -1,0 +1,46 @@
+# Blender3D MTL File: Coffee Mug (EWJ 3D).blend
+# Material Count: 4
+newmtl Material.082_Top.png_Top.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.527500 0.480000 0.410000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Top.png
+
+
+newmtl Material.081_Bottom.p_Bottom.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.567500 0.495000 0.420000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bottom.png
+
+
+newmtl Material.080_Mug.png_Mug.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.395000 0.342500 0.310000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Mug.png
+
+
+newmtl Material.079_Inside.p_Inside.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.635000 0.635000 0.635000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Inside.png
+
+
