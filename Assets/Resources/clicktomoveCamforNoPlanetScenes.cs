@@ -6,7 +6,7 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
 	public bool forward = false;
     public int backVal = -170;
     public int forwardVal = -90;
-    public int incre = 0;
+    public float incre = 0;
     public float custX = 0;
     public bool stuck = false;
     private float custX1 = 0;
@@ -27,6 +27,10 @@ public class clicktomoveCamforNoPlanetScenes : MonoBehaviour {
 	void Update () {
         if (stuck == false)
         {
+
+            incre += Input.GetAxis("Mouse ScrollWheel");
+            incre = Mathf.Clamp(incre, backVal, forwardVal);
+
             if (Input.GetMouseButtonDown(0))
             {
                 forward = !forward;
