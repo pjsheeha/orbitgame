@@ -354,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4941873584386198}
   - component: {fileID: 135787701127721728}
+  - component: {fileID: 114962231125723550}
   m_Layer: 0
   m_Name: skeletonAtmosphere2
   m_TagString: Untagged
@@ -1073,6 +1074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4678019488519714}
   - component: {fileID: 135808218788695848}
+  - component: {fileID: 114856824350795528}
   m_Layer: 0
   m_Name: skeletonAtmosphere1
   m_TagString: Untagged
@@ -5085,7 +5087,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891235986068806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7056, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4419409033112112}
@@ -19270,6 +19272,20 @@ MonoBehaviour:
   explodeRadius: 30
   destroyTimeScale: 1
   shardLifetime: 5
+--- !u!114 &114856824350795528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253810102423110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cad08b557ede477b96f545a8c7987e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 100
+  rotationSpeed: 300
+  player: {fileID: 0}
 --- !u!114 &114857824829584926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19612,6 +19628,20 @@ MonoBehaviour:
   explodeRadius: 30
   destroyTimeScale: 1
   shardLifetime: 5
+--- !u!114 &114962231125723550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090108469727412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cad08b557ede477b96f545a8c7987e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 100
+  rotationSpeed: 300
+  player: {fileID: 0}
 --- !u!114 &114964222295090054
 MonoBehaviour:
   m_ObjectHideFlags: 1

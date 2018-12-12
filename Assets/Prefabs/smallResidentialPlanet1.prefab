@@ -733,6 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181664762556930}
   - component: {fileID: 135969371723787916}
+  - component: {fileID: 114654487888022404}
   m_Layer: 0
   m_Name: smallResidentialAtmosphere
   m_TagString: Untagged
@@ -855,7 +856,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861510210762846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.72225, y: 28.19764, z: -7.35643}
+  m_LocalPosition: {x: 3823, y: 319, z: 437}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4181664762556930}
@@ -3930,6 +3931,20 @@ MonoBehaviour:
   explodeRadius: 30
   destroyTimeScale: 1
   shardLifetime: 5
+--- !u!114 &114654487888022404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1829805300479296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cad08b557ede477b96f545a8c7987e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 100
+  rotationSpeed: 300
+  player: {fileID: 0}
 --- !u!114 &114654799197944126
 MonoBehaviour:
   m_ObjectHideFlags: 1
