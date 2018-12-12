@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4559456616945374}
   - component: {fileID: 135699864411179512}
   - component: {fileID: 114283532855130702}
+  - component: {fileID: 114040763010570812}
   m_Layer: 0
   m_Name: smallResidentialAtmosphere
   m_TagString: Untagged
@@ -681,9 +682,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686688428804042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5913, y: 1, z: -560}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1237, z: -186.66667}
+  m_LocalScale: {x: 30.62996, y: 33.333355, z: 33.333336}
   m_Children:
   - {fileID: 4559456616945374}
   - {fileID: 4794871735958862}
@@ -1710,6 +1711,18 @@ MonoBehaviour:
   explodeRadius: 30
   destroyTimeScale: 1
   shardLifetime: 5
+--- !u!114 &114040763010570812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088513210977280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cef04f705e95410797d2eb21449a4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: {fileID: 1686688428804042}
 --- !u!114 &114127869156234502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1778,7 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cad08b557ede477b96f545a8c7987e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 100
+  gravity: 800
   rotationSpeed: 300
   player: {fileID: 0}
 --- !u!114 &114356968563137712
@@ -2021,7 +2034,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088513210977280}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
