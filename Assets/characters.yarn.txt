@@ -62,3 +62,11 @@ position: 815,456
 <<dspSet Smiley 3>>
 <<MoveOn Smiley firstlines>>He landed, hoping to find a survivor, as impossible as that sounded.
 ===
+title: 0_intro_9
+tags: 
+colorID: 0
+position: 1080,460
+---
+<<dspSet Smiley 9>>
+<<MoveOn Smiley firstlines>>He used the WASD to move along the grid that surrounded the ship. He also clicked to zoom in and out. He also scrolled to zoom in and out.
+===

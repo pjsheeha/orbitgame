@@ -74,8 +74,7 @@ public class MovementScript : MonoBehaviour {
                     if (!Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
                     {
                     currOrb.GetComponent<myRocket>().myrocke1.SetActive(false);
-                       // currOrb.GetComponent<myRocket>().myrocke2.SetActive(false);
-
+                        currOrb.GetComponent<myRocket>().myrocke2.SetActive(false);
                     }
 
                     if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), charWhich)))
@@ -84,7 +83,7 @@ public class MovementScript : MonoBehaviour {
                         currOrb.GetComponent<MeshRenderer>().material = matPressed;
                         //currOrb.GetChild(0).gameObject.setActive(true);
                         currOrb.GetComponent<myRocket>().myrocke1.SetActive(true);
-                      //  currOrb.GetComponent<myRocket>().myrocke2.SetActive(true);
+                        currOrb.GetComponent<myRocket>().myrocke2.SetActive(true);
 
                         //camCube.GetComponent<followPosition>().leader = currOrb.GetComponent<myRocket>().myCyli.gameObject;
                         if (!pressedObjects.Contains(currOrb) && currOrb.activeSelf)
@@ -129,7 +128,7 @@ public class MovementScript : MonoBehaviour {
         float offset = Time.time * scrollSpeedX;
         float offset2 = Time.time * scrollSpeedY;
 
-       // grid.GetComponent<MeshRenderer>().material.SetTextureOffset("_MainTex", new Vector2(offset2, offset));
+       grid.GetComponent<MeshRenderer>().material.SetTextureOffset("_MainTex", new Vector2(offset2, offset));
 
         scrollSpeedY = 0;
         scrollSpeedX = 0;
