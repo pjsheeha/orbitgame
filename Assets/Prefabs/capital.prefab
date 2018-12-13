@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 135608039901951068}
   - component: {fileID: 114860768432968082}
   - component: {fileID: 114586214899407194}
+  - component: {fileID: 114010779560703954}
   m_Layer: 0
   m_Name: captialAtmosphere (1)
   m_TagString: Untagged
@@ -56,8 +57,8 @@ GameObject:
   - component: {fileID: 33585414045912242}
   - component: {fileID: 23614747766939714}
   - component: {fileID: 135426137415088190}
-  - component: {fileID: 114294834983929110}
   - component: {fileID: 114457224453980126}
+  - component: {fileID: 114957562704252184}
   m_Layer: 0
   m_Name: capital
   m_TagString: Untagged
@@ -97,9 +98,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1862868802825560}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1693, y: 0.000061035156, z: 0}
-  m_LocalScale: {x: 666.66724, y: 666.66724, z: 666.6667}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -476, z: 0}
+  m_LocalScale: {x: 612.5991, y: 666.6671, z: 666.6667}
   m_Children:
   - {fileID: 4344499435250004}
   - {fileID: 4699431193143776}
@@ -148,29 +149,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1862868802825560}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114294834983929110
+--- !u!114 &114010779560703954
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1862868802825560}
+  m_GameObject: {fileID: 1746168728600302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcabac17bc06d8347b6610a6597bcb67, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b29dffdcdc139946b7e29b40f21567d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atmosphere: {fileID: 1038679041282954}
-  spawnType: 0
-  spawnPrefab: {fileID: 100030, guid: 4b9015a1e60aa4857bb814addf5867d5, type: 3}
-  respawnThreshold: 0.5
-  respawnDelay: 1
-  cullRadius: 5
-  randomSpawns: 100
-  thetaDivisions: 40
-  phiDivisions: 20
-  sphereUp: {x: 0, y: 0, z: 0}
-  meshSpawner: {fileID: 0}
-  activeSpawns: 0
+  player: {fileID: 0}
+  restartScreen: {fileID: 0}
 --- !u!114 &114457224453980126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,6 +212,19 @@ MonoBehaviour:
   gravity: 1000000
   rotationSpeed: 300
   player: {fileID: 0}
+--- !u!114 &114957562704252184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1862868802825560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b29dffdcdc139946b7e29b40f21567d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  restartScreen: {fileID: 0}
 --- !u!135 &135426137415088190
 SphereCollider:
   m_ObjectHideFlags: 1
